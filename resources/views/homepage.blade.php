@@ -11,11 +11,6 @@
 </head>
 
 <body>
-    <?php
-    
-    dd($character);
-    
-    ?>
 </body>
 
 </html>

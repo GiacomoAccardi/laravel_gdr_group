@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CharactersController;
+use App\Http\Controllers\CharactersController as CharactersController;
+use App\Http\Controllers\ItemsController as ItemsController;
+use App\Http\Controllers\PageController as PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,9 @@ use App\Http\Controllers\CharactersController;
 |
 */
 
-Route::get('/', [CharactersController::class, 'index']);
+Route::get('/', [PageController::class, 'homeRedirect']);
+
+Route::resource('characters', CharactersController::class);
+
+Route::resource('items', ItemsController::class);
 
