@@ -10,6 +10,32 @@ class CharactersController extends Controller
     public function index(){
         $character = Character::all();
 
-        return view('welcome', compact('character'));
+        return view('characters.index', compact('character'));
+    }
+
+    public function create() {
+ 
+    }
+
+    public function store() {
+        
+    }
+
+    public function show() {
+        
+    }
+
+    public function edit() {
+        
+    }
+
+    public function update() {
+        
+    }
+
+    public function destroy() {
+        
     }
 }
+
+

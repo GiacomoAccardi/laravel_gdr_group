@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharactersController;
+use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,9 @@ use App\Http\Controllers\CharactersController;
 |
 */
 
-Route::get('/', [CharactersController::class, 'index']);
+Route::get('/', [PageController::class, 'homeRedirect']);
+
+Route::resource('characters', CharactersController::class);
+
+Route::resource('items', ItemsController::class);
 
