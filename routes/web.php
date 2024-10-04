@@ -17,6 +17,8 @@ use App\Http\Controllers\PageController as PageController;
 */
 
 Route::get('/', [PageController::class, 'homeRedirect']);
+Route::get('/about', [PageController::class, 'aboutRedirect']);
+Route::get('/contacts', [PageController::class, 'contactsRedirect']);
 
 Route::resource('characters', CharactersController::class);
 
