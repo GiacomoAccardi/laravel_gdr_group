@@ -5,8 +5,11 @@
 // font Cinzel
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap'); // font-family: "Cinzel", serif;
 
-header {
+body {
     font-family: 'Dungeon', sans-serif;
-    
     color: $coffee;
+}
+
+header {
+    color: $ebony;
 }
