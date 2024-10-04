@@ -11,10 +11,10 @@ class PageController extends Controller
     }
 
     public function aboutRedirect(){
-        return view('about');
+        return view('pages.about');
     }
 
     public function contactsRedirect(){
-        return view('contacts');
+        return view('pages.contacts');
     }
 }
