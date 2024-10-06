@@ -9,4 +9,11 @@ main {
             filter: sepia(60%);
         }
     }
+
+    .info-box {
+        max-width: 600px;
+        p {
+            font-size: 25px;
+        }
+    }
 }
