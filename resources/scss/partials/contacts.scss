@@ -1,0 +1,32 @@
+form {
+    padding: 16px;
+    background-color: white;
+    background-color: transparent;
+
+    textarea {
+        max-height: 200px;
+    }
+
+    label {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    button {
+        background-color: $seal-brown;
+        color: #fff;
+        padding: 10px 12px;
+        font-size: 20px;
+        font-family: 'Dungeon', sans-serif;
+        border: none;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: $espresso;
+        }
+
+        &:active {
+            background-color: $seal-brown;
+        }
+    }
+}
