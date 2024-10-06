@@ -17,3 +17,20 @@ main {
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .admins {
+        flex-direction: column;
+        .img-box {
+            img {
+                padding-bottom: 20px;
+            }
+        }
+
+        .info-box {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
