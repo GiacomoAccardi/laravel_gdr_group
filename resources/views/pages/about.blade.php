@@ -11,6 +11,9 @@
         <div class="row">
             {{-- qui andranno le bio --}}
             <div class="col-12 col-md-6">
+                <div class="img-box">
+                    <img src="{{Vite::asset('resources/img/piero.jpg')}}" alt="">
+                </div>
             </div>
             <div class="col-12 col-md-6">
             </div>
