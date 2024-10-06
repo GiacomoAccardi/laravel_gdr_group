@@ -4,8 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Delle nostre persone</h1>
-                <h3>Le menti ingenue che si celano dietro tal bizzarro portale d'informazioni</h3>
+                <div class="text-center" id="about-text">
+                    <h1 class="fw-bolder" id="about-title">Delle nostre persone</h1>
+                    <h3 id="about-subtitle">Le menti ingenue che si celano dietro tal bizzarro portale d'informazioni</h3>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -17,7 +19,7 @@
                     </div>
                     <div class="info-box px-5">
                         <h2 class="text-center fw-bolder">Sir Piero Bramanti</h2>
-                        <p>Nato e cresciuto in quel di Pesaro, tra le onde dell'Adriatico mare. <br> Maestro nell’arte della sfoglia, la sua mano stende la pasta con tal grazia che persino le anziane dame di gran lignaggio del paese non vi si posson paragonare. Le sue passioni, nella quiete del tempo libero, sono le storie narrate e le melodie diffuse dalle onde eteree dei menestrelli. Predilige una serata tranquilla tra le mura domestiche, dove si impegna in epiche battaglie simulate, piuttosto che partecipare ai frenetici festeggiamenti delle danze notturne. Si considera un gigante, dotato di un cuore tenero e affettuoso.</p>
+                        <p>Nato e cresciuto in quel di Pesaro, tra le onde dell'Adriatico mare. Maestro nell’arte della sfoglia, la sua mano stende la pasta con tal grazia che persino le anziane dame di gran lignaggio del paese non vi si posson paragonare. Le sue passioni, nella quiete del tempo libero, sono le storie narrate e le melodie diffuse dalle onde eteree dei menestrelli. Predilige una serata tranquilla tra le mura domestiche, dove si impegna in epiche battaglie simulate, piuttosto che partecipare ai frenetici festeggiamenti delle danze notturne. Si considera un gigante, dotato di un cuore tenero e affettuoso.</p>
                     </div>
                 </div>
             </div>
