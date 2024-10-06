@@ -1,0 +1,70 @@
+main {
+    .jumbo-group {
+        background-image: url('/images/group.jpg');
+        width: 100%;
+        height: 700px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        #about-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Dungeon', sans-serif;
+            max-width: 650px;
+            background-image: url('images/old-paper.avif');
+            background-size: cover;
+            #about-title {
+                font-size: 50px;
+            }
+            #about-subtitle {
+                font-size: 30px;
+            }
+        }
+    }
+    .img-box {
+        max-width: 200px;
+        max-height: 400px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(60%);
+        }
+    }
+
+    .info-box {
+        max-width: 700px;
+        color: $seal-brown;
+        p {
+            font-size: 22px;
+            &::first-letter {
+                initial-letter: 2;
+                color: $seal-brown;
+            }
+            i {
+                font-size: 20px;
+                color: #b41e39;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .admins {
+        flex-direction: column;
+        .img-box {
+            img {
+                padding-bottom: 20px;
+            }
+        }
+
+        .info-box {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
