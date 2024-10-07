@@ -29,7 +29,7 @@
                         <form action="{{ route('characters.destroy', ['character' => $character->id]) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this character?')">Delete</button>
+                            <button type="submit" class="btn btn-danger btn-sm del-btn" data-pg-name="{{ $character->name }}">Delete</button>
                         </form>
                     </div>
                 </div>
@@ -38,4 +38,5 @@
         </div>
     </div>
 </div>
+@include('characters.partials.destroy_modal')
 @endsection
