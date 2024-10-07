@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Character;
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 
 class CharactersController extends Controller
 {
@@ -26,7 +28,7 @@ class CharactersController extends Controller
      */
     public function create()
     {
-        //
+        return view('characters.create');
     }
 
     /**
@@ -35,9 +37,10 @@ class CharactersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
-        //
+        Character::create($request->validated());
+        return redirect()->route('characters.index')->with('success', 'Character created successfully.');
     }
 
     /**
@@ -60,7 +63,8 @@ class CharactersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $character = Character::findOrFail($id);
+        return view('characters.edit', compact('character'));
     }
 
     /**
@@ -70,9 +74,10 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCharacterRequest $request, Character $character)
     {
-        //
+        $character->update($request->validated());
+        return redirect()->route('characters.index')->with('success', 'Character updated successfully.');
     }
 
     /**
@@ -81,9 +86,8 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Character $character)
+    public function destroy($id)
     {
-        $character->delete();
-        return redirect()->route('characters.index');
+        //
     }
 }
