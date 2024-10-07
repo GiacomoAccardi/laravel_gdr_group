@@ -1,0 +1,22 @@
+#create_page {
+    background-image: url('/images/land\(2\).jpg');
+    background-size: cover;
+    padding: 150px 0;
+
+    label {
+        letter-spacing: 3px;
+    }
+
+    .fit_content {
+        width: fit-content;
+        background-color: rgb(255, 241, 178);
+    }
+
+    .font_fam {
+        font-family: 'Dungeon', sans-serif;
+    }
+
+    .letter_spacing {
+        letter-spacing: 1px;
+    }
+}
