@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Old London', sans-serif;
-    background: radial-gradient(circle, rgb(255, 255, 255, 1) 40%, rgb(222, 207, 166, 1) 90%);
+    background-color: $coffee;
 }
 
 @import 'partials/index';
