@@ -4,7 +4,7 @@
             <div class="col-12 p-1 d-flex align-items-center justify-content-between">
 
                 <div class="logo-container d-flex align-items-center justify-content-between">
-                    <img src="https://cdn-icons-png.flaticon.com/512/647/647847.png" alt="asd">
+                    <img src="{{ Vite::asset('/resources/img/raccoon.png') }}" alt="asd">
                     <h1 class="mt-3 mx-3 fs-1">LARAVEL-GDR</h1>
 
                     <a class="mt-2 fs-2" href="{{ route('homepage') }}"> - Home</a>
