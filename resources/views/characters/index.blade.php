@@ -29,7 +29,7 @@
                         <form action="{{ route('characters.destroy', ['character' => $character->id]) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            <button type="submit" class="btn btn-danger btn-sm del-btn">Delete</button>
                         </form>
                     </div>
                 </div>
@@ -38,4 +38,5 @@
         </div>
     </div>
 </div>
+@include('characters.partials.destroy_modal')
 @endsection
