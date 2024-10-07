@@ -6,8 +6,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="modal-text" class="fs-3">Sei ben certo di voler bandire questo personaggio?</p>
-          <span>L'azione è irrevocabile e non potrà essere disfatta.</span>
+          <p id="modal-text" class="fw-bolder">Sei ben certo di voler bandire questo personaggio?</p>
+          <span>L'azione è irrevocabile e non potrà essere disfatta</span>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="back-del" data-bs-dismiss="modal">Rinunciare</button>
