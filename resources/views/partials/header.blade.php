@@ -14,7 +14,7 @@
                 <div class="menu-container mt-3">
                     <ul class="d-flex fs-2 gap-3">
                         <li>
-                            <a href="">Characters</a>
+                            <a href="{{ route('characters.index') }}">Characters</a>
                         </li>
                         <li>
                             <a href="">Items</a>
