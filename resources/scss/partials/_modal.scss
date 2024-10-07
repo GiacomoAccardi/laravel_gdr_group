@@ -1,0 +1,23 @@
+.modal-content {
+    background-color: $coffee;
+    border-radius: 20px;
+    .modal-title, .modal-body {
+        color: $seal-brown;
+    }
+    span {
+        font-size: 20px;
+        color: $ebony;
+    }
+    .modal-footer {
+        font-size: 20px;
+        #back-del {
+            background-color: #fff;
+            border: 1px solid $ebony;
+            color: $ebony;
+        }
+        #confirm-del {
+            background-color: $ebony;
+            border: 1px solid #fff;
+        }
+    }
+}

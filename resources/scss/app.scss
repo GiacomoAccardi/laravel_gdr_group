@@ -2,6 +2,9 @@
 @import 'generals/variables.scss';
 @import 'partials/about.scss';
 @import 'partials/contacts.scss';
+@import 'partials/index';
+@import 'partials/show';
+@import 'partials/modal';
 // font Dungeon: quello nell'header
 @import url('https://fonts.cdnfonts.com/css/dungeon'); // font-family: 'Dungeon', sans-serif;
 // font Cinzel
@@ -14,8 +17,6 @@ body {
     background: radial-gradient(circle, rgb(255,255,255,1) 40%, rgb(222,207,166,1) 90%);
 }
 
-@import 'partials/index';
-@import 'partials/show';
 
 header {
     font-family: 'Dungeon', sans-serif;
