@@ -1,0 +1,74 @@
+.jumbo-section {
+    height: 500px;
+    background-image: url(https://dev.ruinnation.com/assets/2017/07/Elder_Scrolls_Online_Concept_Art_Bangkorai-1600x900.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .home-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .title {
+            font-family: 'Old London', sans-serif;
+            color: white;
+            font-size: 85pt;
+            text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.63);
+        }
+    
+        .frame-box {
+            height: 100px;
+    
+            img {
+                max-height: 100%;
+                filter: invert(1);
+            }
+        }
+    }
+}
+
+#home-text {
+    font-family: 'Old London', sans-serif;
+    font-size: 20pt;
+    color: $seal-brown;
+    letter-spacing: 3px;
+
+    &::first-letter {
+        initial-letter: 2;
+        color: $seal-brown;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .jumbo-section {
+        .home-box {
+            .title {
+                font-size: 70pt;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .jumbo-section {
+        .home-box {
+            .title {
+                font-size: 65pt;
+            }
+
+            .frame-box {
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .jumbo-section {
+        .home-box {
+            .title {
+                font-size: 50pt;
+            }
+        }
+    }
+}

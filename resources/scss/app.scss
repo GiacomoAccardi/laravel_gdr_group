@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'generals/variables.scss';
+@import 'partials/homepage.scss';
 @import 'partials/about.scss';
 @import 'partials/contacts.scss';
 @import 'partials/index';
@@ -51,37 +52,4 @@ header::before {
     background-size: cover;
     opacity: 0.3;
     z-index: -1;
-}
-
-//Header section
-
-.jumbo-section {
-    height: 500px;
-    background-image: url(https://dev.ruinnation.com/assets/2017/07/Elder_Scrolls_Online_Concept_Art_Bangkorai-1600x900.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .title {
-        font-family: 'Old London', sans-serif;
-        color: white;
-        font-size: 85pt;
-        text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.63);
-    }
-
-    img {
-        height: 100px;
-        filter: invert(1);
-    }
-}
-
-#home-text {
-    font-family: 'Old London', sans-serif;
-    font-size: 20pt;
-    color: $seal-brown;
-    letter-spacing: 3px;
-
-    &::first-letter {
-        initial-letter: 2;
-        color: $seal-brown;
-    }
 }

@@ -14,7 +14,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12" class="text-center mt-5">
+            <div class="col-12 text-center mt-5">
                 <p id="about-subtitle">"Vi presentiamo le menti che si celano dietro tal bizzarro portale d'informazioni, una
                 compagnia di spiriti audaci e singolari, uniti dal destino e dalla ventura.
                 Ognuno, con la propria storia e talento, ha intrecciato il proprio cammino con quello degli altri, forgiando
