@@ -3,10 +3,11 @@
 @import 'partials/homepage.scss';
 @import 'partials/about.scss';
 @import 'partials/contacts.scss';
-@import 'partials/index';
+@import 'partials/characters';
+@import 'partials/create';
 @import 'partials/show';
 @import 'partials/modal';
-@import 'partials/create';
+@import 'partials/offcanvas';
 // font Dungeon: quello nell'header
 @import url('https://fonts.cdnfonts.com/css/dungeon'); // font-family: 'Dungeon', sans-serif;
 // font Cinzel
@@ -27,6 +28,7 @@ header {
     position: relative;
     z-index: 1;
 
+
     a {
         text-decoration: none;
         color: black;
@@ -34,19 +36,23 @@ header {
 
     ul {
         list-style: none;
-        .dropdown-menu{
+
+        .dropdown-menu {
             background-color: $seal-brown;
-            .dropdown-toggle::after {
+            li {
                 background-color: $seal-brown;
-                width: 10px;
-                height: 10px;
+                transition: all 0.5s;
+                padding: 10px 5px;
+                &:hover {
+                    background-color: $btns_hover;
+                }
+                a {
+                    color: #fff;
+                    font-size: 24px;
+                    padding: 0 10px;
+                }
             }
-            a {
-                color: #fff;
-                font-size: 24px;
-                padding: 0 10px;
         }
-    }
     }
 
     img {

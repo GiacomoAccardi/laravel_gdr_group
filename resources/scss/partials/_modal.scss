@@ -44,8 +44,8 @@
 
    
             &:hover {
-                background-color: #c4b463;
-                border: 1px solid #c4b463;
+                background-color: $btns_hover;
+                border: 1px solid $btns_hover;
                 color: $seal-brown;
             }
         }
