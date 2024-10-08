@@ -25,7 +25,7 @@
                             </a>
                             <ul class="dropdown-menu p-0">
                               <li> <a href="{{ route('characters.index') }}">Personaggi</a></li>
-                              <li><a href="">Oggetti</a></li>
+                              <li><a href="{{ route('items.index') }}">Oggetti</a></li>
                             </ul>
                         </li>
                     

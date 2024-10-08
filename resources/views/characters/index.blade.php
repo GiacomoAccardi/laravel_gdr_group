@@ -6,7 +6,7 @@
         <div class="col-12 index-page"> 
             <!-- Pulsante per aggiungere un nuovo personaggio -->
             <div class="text-end mb-3">
-                <a href="{{ route('characters.create') }}" class="btn btn-primary">Add New Character</a>
+                <a href="{{ route('characters.create') }}" class="btn btn-primary"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
             </div>
 
             <!-- Lista dei personaggi -->
@@ -34,6 +34,9 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+            <div class="text-end mb-3">
+                <a href="{{ route('characters.create') }}" class="btn btn-primary"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
             </div>
         </div>
     </div>
