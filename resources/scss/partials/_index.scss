@@ -31,21 +31,36 @@
         }
     }
 
-    .btn {
-        font-family: 'Dungeon', sans-serif;
+    .btn-personal {
+        text-decoration: none;
         font-size: 1rem;
         text-transform: uppercase;
         padding: 10px 15px;
-        background-color: #999886;
-        color: white;
+        color: #fff;
         border: none;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: #f1851e;
+        font-size: 18px;
+        transition: all 0.3s;
+        
+        i {
+            color: #fff;
+            margin-right: 3px;
         }
 
-        &.btn-info {
+        &:hover {
+            i {
+                color: $seal-brown;
+            }
+        }
+
+        &.btn-create {
+            background-color: #999886;
+            font-size: 26px;
+            &:hover {
+                background-color: #f1851e;
+            }
+        }
+
+        &.btn-show {
             background-color: #c5bc54;
 
             &:hover {
@@ -53,7 +68,7 @@
             }
         }
 
-        &.btn-warning {
+        &.btn-edit {
             background-color: #8e7444;
 
             &:hover {
@@ -61,17 +76,12 @@
             }
         }
 
-        &.btn-danger {
+        &.del-btn {
             background-color: #a66e53;
-
+            border-radius: 0;
             &:hover {
                 background-color: #d47c50;
             }
-        }
-
-        i {
-            color: $seal-brown;
-            margin-right: 3px;
         }
     }
 }

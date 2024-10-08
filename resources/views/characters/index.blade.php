@@ -6,7 +6,7 @@
         <div class="col-12 index-page"> 
             <!-- Pulsante per aggiungere un nuovo personaggio -->
             <div class="text-end mb-3">
-                <a href="{{ route('characters.create') }}" class="btn btn-primary"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
+                <a href="{{ route('characters.create') }}" class="btn-personal btn-create"><i class="bi bi-plus-square-fill me-2"></i>Nuovo personaggio</a>
             </div>
 
             <!-- Lista dei personaggi -->
@@ -20,23 +20,23 @@
                     <!-- Pulsanti a destra -->
                     <div>
                         <!-- Link per visualizzare i dettagli del personaggio -->
-                        <a href="{{ route('characters.show', ['character' => $character->id]) }}" class="btn btn-info btn-sm">Show</a>
+                        <a href="{{ route('characters.show', ['character' => $character->id]) }}" class="btn-personal btn-show"><i class="bi bi-eye-fill"></i>Dettagli</a>
 
                         <!-- Link per modificare il personaggio -->
-                        <a href="{{ route('characters.edit', ['character' => $character->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{{ route('characters.edit', ['character' => $character->id]) }}" class="btn-personal btn-edit"><i class="bi bi-feather"></i>Riscrivi</a>
 
                         <!-- Form per eliminare il personaggio -->
                         <form action="{{ route('characters.destroy', ['character' => $character->id]) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm del-btn" data-pg-name="{{ $character->name }}">Delete</button>
+                            <button type="submit" class="btn-personal del-btn" data-pg-name="{{ $character->name }}">Bandisci</button>
                         </form>
                     </div>
                 </div>
                 @endforeach
             </div>
             <div class="text-end mb-3">
-                <a href="{{ route('characters.create') }}" class="btn btn-primary"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
+                <a href="{{ route('characters.create') }}" class="btn-personal btn-create"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
             </div>
         </div>
     </div>
