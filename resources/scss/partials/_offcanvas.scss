@@ -1,0 +1,31 @@
+#offcanvas-button {
+    font-size: 30px;
+    padding: 8px 10px;
+    background-color: transparent;
+    border: none;
+    color: $seal-brown;
+    transition: all 0.3s;
+        &:hover {
+            color: $btns_hover;
+        }
+}
+
+.offcanvas {
+    background-color: $coffee;
+    .offcanvas-header {
+        border-bottom: 1px solid $seal-brown;
+        h2 {
+            font-size: 32px;
+        }
+        .btn-close {
+            color: $seal-brown;
+        }
+    }
+    .offcanvas-body {
+        padding: 50px 20px;
+        font-size: 25px;
+        a:hover {
+            color: #fff;
+        }
+    }
+}
