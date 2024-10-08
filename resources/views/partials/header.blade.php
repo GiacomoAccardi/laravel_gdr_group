@@ -14,24 +14,25 @@
                 </div>
 
                 <div class="menu-container mt-3">
+                    <i class="bi bi-list"></i>
                     <ul class="d-flex fs-2 gap-3">
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Database
                             </a>
-                            <ul class="dropdown-menu">
-                              <li> <a href="{{ route('characters.index') }}">Pgs</a></li>
+                            <ul class="dropdown-menu p-0">
+                              <li> <a href="{{ route('characters.index') }}">Personaggi</a></li>
                               <li><a href="">Oggetti</a></li>
                             </ul>
                         </li>
                     
-                    <li>
-                        <a href="{{ route('about') }}">About us</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('contacts') }}">Contacts</a>
-                    </li>
+                        <li>
+                            <a href="{{ route('about') }}">Su di noi</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('contacts') }}">Contatti</a>
+                        </li>
                     </ul>
                 </div>
 
