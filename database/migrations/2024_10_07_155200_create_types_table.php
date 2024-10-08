@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('image')->default('https://picsum.photos/id/1/200/300')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
