@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharactersController as CharactersController;
 use App\Http\Controllers\ItemsController as ItemsController;
+use App\Http\Controllers\TypeController as TypeController;
 use App\Http\Controllers\PageController as PageController;
 
 /*
@@ -21,6 +22,7 @@ Route::get('/about', [PageController::class, 'aboutRedirect'])->name('about');
 Route::get('/contacts', [PageController::class, 'contactsRedirect'])->name('contacts');
 
 Route::resource('characters', CharactersController::class);
+Route::resource('types', TypeController::class);
 
 Route::resource('items', ItemsController::class);
 
