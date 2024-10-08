@@ -42,5 +42,5 @@
         </div>
     </div>
 </div>
- @include('items.partials.destroy_modal')
+{{-- @include('items.partials.destroy_modal') --}}
 @endsection
