@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 index-page"> 
                 <!-- Lista dei personaggi -->
-                <div class="list-group mt-3">
+                <div class="list-group">
                     <!-- Ciclo sui personaggi -->
                     @foreach($characters as $character)
                     <div class="list-group-item d-flex justify-content-between align-items-center">
