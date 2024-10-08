@@ -20,16 +20,17 @@
                     <!-- Pulsanti a destra -->
                     <div>
                         <!-- Link per visualizzare i dettagli del personaggio -->
-                        <a href="{{ route('items.show', ['item' => $item->id]) }}" class="btn btn-info btn-sm">Show</a>
+                        <a href="{{ route('items.show', ['item' => $item->id]) }}" class="btn-personal btn-show"><i class="bi bi-eye-fill"></i>Dettagli</a>
+
 
                         <!-- Link per modificare il personaggio -->
-                        <a href="{{ route('items.edit', ['item' => $item->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{{ route('items.edit', ['item' => $item->id]) }}" class="btn-personal btn-edit"><i class="bi bi-feather"></i>Riscrivi</a>
 
                         <!-- Form per eliminare il personaggio -->
                         <form action="{{ route('items.destroy', ['item' => $item->id]) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm del-btn" data-pg-name="{{ $item->name }}">Delete</button>
+                            <button type="submit" class="btn-personal del-btn" data-pg-name="{{ $item->name }}">Bandisci</button>
                         </form>
                     </div>
                 </div>

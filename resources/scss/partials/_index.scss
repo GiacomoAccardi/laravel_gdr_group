@@ -1,6 +1,5 @@
 .index-page {
     font-family: 'Dungeon', sans-serif;
-    background-color: #e9e09f;
     padding: 30px;
     color: #8e7444;
 
@@ -40,7 +39,7 @@
         border: none;
         font-size: 18px;
         transition: all 0.3s;
-        
+
         i {
             color: #fff;
             margin-right: 3px;
@@ -55,6 +54,7 @@
         &.btn-create {
             background-color: #999886;
             font-size: 26px;
+
             &:hover {
                 background-color: #f1851e;
             }
@@ -79,9 +79,15 @@
         &.del-btn {
             background-color: #a66e53;
             border-radius: 0;
+
             &:hover {
                 background-color: #d47c50;
             }
         }
     }
+}
+
+.bg-charachters {
+    background-image: url('images/characters.jpg');
+    background-size: cover;
 }
