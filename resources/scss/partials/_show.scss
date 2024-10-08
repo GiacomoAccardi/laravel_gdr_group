@@ -2,43 +2,38 @@
 
 .show-page {
     font-family: 'Dungeon', sans-serif;
-    background-color: #e9e09f;
     padding: 30px;
     color: #8e7444;
 
     h1 {
-        font-size: 3rem;
+        font-size: 4.5rem;
         text-align: center;
-        color: #a66e53;
-        text-shadow: 1px 1px 2px #999886;
-        border-bottom: 3px solid #a66e53;
-        padding-bottom: 10px;
+        color: #141312;
+        text-shadow: 1px 1px 2px #cfcfc8;
         margin-bottom: 20px;
     }
 
-    h2 {
-        text-shadow: 1px 1px 2px #4e4e48;
+    h4 {
+        font-size: 3.2rem;
+        color: #0a0906;
+        text-shadow: 1px 1px 2px #cfcfc8;
+        margin-bottom: 10px;
     }
 
     p {
         font-size: 3.2rem;
         text-align: center;
-        color: #999886;
+        color: #000000;
         margin-bottom: 20px;
+        text-shadow: 1px 1px 2px #cfcfc8;
     }
 
     .character-stats {
         text-align: center;
-
-        h4 {
-            font-size: 1.5rem;
-            color: #8e7444;
-            margin-bottom: 10px;
-        }
     }
 
     img {
-        border: 5px solid #a7a058;
+        border: 5px solid #beb655;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
     }
@@ -74,4 +69,11 @@
             }
         }
     }
+}
+
+.bg-show-charachters {
+    background-image: url('/images/show1.jpg');
+    background-size: 145%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
 }

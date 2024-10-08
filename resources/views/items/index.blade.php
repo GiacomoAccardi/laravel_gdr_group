@@ -5,6 +5,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 index-page"> 
+                <div class="text-end mb-3">
+                    <a href="{{ route('items.create') }}"class="btn-personal btn-create"><i class="bi bi-plus-square-fill"></i> Nuovo oggetto</a>
+                </div>
                 <!-- Lista dei personaggi -->
                 <div class="list-group">
                     <!-- Ciclo sui personaggi -->
@@ -39,5 +42,5 @@
         </div>
     </div>
 </div>
-{{-- @include('items.partials.destroy_modal') --}}
+ @include('items.partials.destroy_modal')
 @endsection

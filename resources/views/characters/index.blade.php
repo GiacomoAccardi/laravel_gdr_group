@@ -4,7 +4,10 @@
 <div class="bg-charachters">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 index-page"> 
+            <div class="col-12 col-md-6 index-page">
+                <div class="text-end mb-3">
+                    <a href="{{ route('characters.create') }}" class="btn-personal btn-create"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
+                </div> 
                 <!-- Lista dei personaggi -->
                 <div class="list-group">
                     <!-- Ciclo sui personaggi -->
