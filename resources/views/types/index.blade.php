@@ -6,30 +6,30 @@
         <div class="col-12 index-page"> 
             <!-- Pulsante per aggiungere un nuovo personaggio -->
             <div class="text-end mb-3">
-                <a href="{{ route('characters.create') }}" class="btn btn-primary">Add New Character</a>
+                <a href="{{ route('types.create') }}" class="btn btn-primary">Add New Type</a>
             </div>
 
             <!-- Lista dei personaggi -->
             <div class="list-group">
                 <!-- Ciclo sui personaggi -->
-                @foreach($characters as $character)
+                @foreach($types as $type)
                 <div class="list-group-item d-flex justify-content-between align-items-center">
                     <!-- Nome del personaggio a sinistra -->
-                    <span class="fs-2">{{ $character->name }}</span>
+                    <span class="fs-2">{{ $type->name }}</span>
 
                     <!-- Pulsanti a destra -->
                     <div>
                         <!-- Link per visualizzare i dettagli del personaggio -->
-                        <a href="{{ route('characters.show', ['character' => $character->id]) }}" class="btn btn-info btn-sm">Show</a>
+                        <a href="{{ route('types.show', ['type' => $type->id]) }}" class="btn btn-info btn-sm">Show</a>
 
                         <!-- Link per modificare il personaggio -->
-                        <a href="{{ route('characters.edit', ['character' => $character->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{{ route('types.edit', ['type' => $type->id]) }}" class="btn btn-warning btn-sm">Edit</a>
 
                         <!-- Form per eliminare il personaggio -->
-                        <form action="{{ route('characters.destroy', ['character' => $character->id]) }}" method="POST" class="d-inline">
+                        <form action="{{ route('types.destroy', ['type' => $type->id]) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm del-btn" data-pg-name="{{ $character->name }}">Delete</button>
+                            <button type="submit" class="btn btn-danger btn-sm del-btn" data-pg-name="{{ $type->name }}">Delete</button>
                         </form>
                     </div>
                 </div>
@@ -38,5 +38,4 @@
         </div>
     </div>
 </div>
-@include('characters.partials.destroy_modal')
 @endsection
