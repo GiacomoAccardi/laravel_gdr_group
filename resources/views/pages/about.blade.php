@@ -7,22 +7,25 @@
                 <div class="col-12">
                     <div class="text-center p-3" id="about-text">
                         <h1 class="fw-bolder" id="about-title">Delle nostre persone</h1>
-                        {{-- <h3 id="about-subtitle">Le menti ingenue che si celano dietro tal bizzarro portale d'informazioni
-                        </h3> --}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container text-center mt-5">
-        <p id="about-subtitle">"Vi presentiamo le menti che si celano dietro tal bizzarro portale d'informazioni, una
-            compagnia di spiriti audaci e singolari, uniti dal destino e dalla ventura.
-            Ognuno, con la propria storia e talento, ha intrecciato il proprio cammino con quello degli altri, forgiando
-            un'alleanza indissolubile, simile a quella di cavalieri radunati attorno alla Tavola Rotonda. Nel loro viaggio,
-            affrontano sfide d’ogni sorta, con astuzia, saggezza e un cuore fiero. Uniti dall’onore e dall’amore per la
-            sapienza, essi raccolgono conoscenze e le tramandano a chiunque osi avventurarsi nei meandri del loro sapere.
-            Siate dunque pronti a conoscere questi prodi, le cui gesta risuonano fra castelli e terre lontane."
-        </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" class="text-center mt-5">
+                <p id="about-subtitle">"Vi presentiamo le menti che si celano dietro tal bizzarro portale d'informazioni, una
+                compagnia di spiriti audaci e singolari, uniti dal destino e dalla ventura.
+                Ognuno, con la propria storia e talento, ha intrecciato il proprio cammino con quello degli altri, forgiando
+                un'alleanza indissolubile, simile a quella di cavalieri radunati attorno alla Tavola Rotonda. Nel loro viaggio,
+                affrontano sfide d’ogni sorta, con astuzia, saggezza e un cuore fiero. Uniti dall’onore e dall’amore per la
+                sapienza, essi raccolgono conoscenze e le tramandano a chiunque osi avventurarsi nei meandri del loro sapere.
+                Siate dunque pronti a conoscere questi prodi, le cui gesta risuonano fra castelli e terre lontane."
+                </p>
+            </div>
+        </div>
+       
     </div>
     <div class="container">
         <div class="row">
