@@ -10,8 +10,8 @@
           <span>L'azione è irrevocabile e non potrà essere disfatta</span>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="back-del" data-bs-dismiss="modal">Rinunciare</button>
-            <button type="button" class="btn btn-primary" id="confirm-del">Apporre il sigillo</button>
+            <button type="button" id="back-del" data-bs-dismiss="modal">Rinunciare</button>
+            <button type="button" id="confirm-del">Apporre il sigillo</button>
         </div>
       </div>
     </div>
