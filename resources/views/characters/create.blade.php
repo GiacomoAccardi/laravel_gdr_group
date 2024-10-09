@@ -10,7 +10,7 @@
                 <form action="{{ route('characters.store') }}" method="post" class="w-75">
                     @csrf
                     <div class="row text-white">
-                        <div class="col-4">
+                        <div class="col-12 col-md-6">
                             <div class="form-group py-2">
                                 <label for="name" class="fs-2 fw-semibold">Nome</label>
                                 <input type="text" class="form-control rounded-0 @error('name') is-invalid @enderror"
@@ -20,19 +20,26 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-md-6">
                             <div class="form-group py-2">
-                                <label for="description" class="fs-2 fw-semibold">Descrizione</label>
-                                <textarea class="form-control rounded-0 @error('description') is-invalid @enderror" id="description" name="description"
-                                    rows="3" required>{{ old('description') }}</textarea>
-                                @error('description')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
+                                <label for="type_id" class="fs-2 fw-semibold">Classe</label>
+                                <select name="type_id" class="form-control rounded-0 type_id @error('type_id') is-invalid @enderror" required>
+                                    <option value="">Seleziona la classe</option>
+                                    @foreach($types as $type)
+                                        <option value="{{ $type->id }}" data-img="{{ asset($type->image) }}">
+                                            
+                                            {{ $type->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
                             </div>
+                            @error('type_id')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="row text-white">
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="strength" class="fs-2 fw-semibold">Forza</label>
                                 <input type="number" min="0" max="20"
@@ -43,7 +50,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="defence" class="fs-2 fw-semibold">Difesa</label>
                                 <input type="number" min="0" max="20"
@@ -54,7 +61,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="speed" class="fs-2 fw-semibold">Velocita'</label>
                                 <input type="number" min="0" max="20"
@@ -65,7 +72,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4 offset-md-2">
                             <div class="form-group py-2">
                                 <label for="intelligence" class="fs-2 fw-semibold">Intelligenza</label>
                                 <input type="number" min="0" max="20"
@@ -76,7 +83,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="life" class="fs-2 fw-semibold">Salute</label>
                                 <input type="number" min="0" max="200"
@@ -87,6 +94,23 @@
                                 @enderror
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group py-2">
+                                <label for="description" class="fs-2 fw-semibold">Descrizione</label>
+                                <textarea class="form-control rounded-0 @error('description') is-invalid @enderror" id="description" name="description"
+                                    rows="3" required>{{ old('description') }}</textarea>
+                                @error('description')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                         
+                        </div>
+                    </div>
+                    {{-- prova anteprima --}}
+                    <div class="mb-2 img-preview gif-box mx-auto">
+                        <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
                     <div class="py-3">
                         <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing mt-3">Genera</button>
