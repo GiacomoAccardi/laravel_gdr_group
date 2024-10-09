@@ -14,7 +14,7 @@ class Character extends Model
         return Str::slug($x, '-');
     }
 
-    public function types() {
-        return $this->hasMany(Type::class);
+    public function type() {
+        return $this->belongsTo(Type::class);
     }
 }

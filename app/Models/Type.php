@@ -13,4 +13,8 @@ class Type extends Model
     public static function createSlug($x) {
         return Str::slug($x, '-');
     }
+
+    public function characters() {
+        return $this->hasMany(Character::class);
+    }
 }
