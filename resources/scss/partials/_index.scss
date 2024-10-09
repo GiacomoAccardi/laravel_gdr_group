@@ -6,9 +6,9 @@
     h1 {
         font-size: 4rem;
         text-align: center;
-        color: #5b4c32;
+        color: $seal-brown;
         text-shadow: 1px 1px 2px #999886;
-        border-bottom: 3px solid #8e7444;
+        border-bottom: 3px solid $seal-brown;
         padding-bottom: 10px;
         margin-bottom: 20px;
     }
@@ -19,6 +19,7 @@
         border-radius: 12px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 0 0 5px #766544;
         border-image: linear-gradient(to bottom, #8e7444, #5b4c32, #8e7444) 1;
+        transition: all 0.5s;
 
         &:hover {
             background-color: #EEE3D4;
@@ -26,8 +27,12 @@
         }
 
         span {
-            font-size: 1.5rem;
+            font-size: 30px;
             font-weight: bold;
+        }
+
+        form {
+            padding-right: 0;
         }
     }
 
@@ -43,7 +48,6 @@
 
         i {
             color: #fff;
-            margin-right: 3px;
         }
 
         &:hover {
@@ -79,6 +83,7 @@
 
         &.del-btn {
             background-color: #a66e53;
+            padding: 5px 15px;
             border-radius: 0;
 
             &:hover {
@@ -88,18 +93,25 @@
     }
 }
 
+.bg-charachters, .bg-items {
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
 .bg-charachters {
     background-image: url('images/characters.jpg');
-    background-size: 100%;
     background-position: 50% 25%;
-    background-repeat: repeat;
+    
 }
 
 .bg-items {
     background-image: url('images/items.jpg');
-    background-size: 100%;
     background-position: 40% 25%;
-    background-repeat: repeat;
+}
+
+.bg-panel {
+    background-color: #edc57a9c;
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -107,7 +119,7 @@
         padding: 15px;
 
         h1 {
-            font-size: 2rem;
+            font-size: 3rem;
         }
 
         .btn-personal {
@@ -117,27 +129,23 @@
 
         .list-group-item {
             span {
-                font-size: 1.2rem;
+                font-size: 25px;
             }
         }
     }
 }
 
-.bg-panel {
-    background-color: white;
-    position: relative;
-    z-index: 1;
-}
 
-.bg-panel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(https://cdn.textures4photoshop.com/tex/thumbs/grunge-stained-old-paper-texture-130.jpg);
-    background-size: cover;
-    opacity: 0.55;
-    z-index: -1;
-}
+
+// .bg-panel::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-image: url(https://cdn.textures4photoshop.com/tex/thumbs/grunge-stained-old-paper-texture-130.jpg);
+//     background-size: cover;
+//     opacity: 0.55;
+//     z-index: -1;
+// }
