@@ -1,0 +1,55 @@
+#create_page {
+    font-family: 'Dungeon', sans-serif;
+    background-image: url('/images/land\(2\).jpg');
+    background-size: cover;
+    padding: 110px 0;
+
+    label {
+        letter-spacing: 3px;
+        text-shadow:
+            -1px -1px 10px #587667,
+            1px -1px 10px #587667,
+            -1px 1px 10px #587667,
+            1px 1px 10px #587667;
+    }
+
+    input,
+    textarea {
+        border: 2px solid $seal-brown;
+    }
+
+    input[type='number'] {
+        font-size: 1.5rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    input[type='text'] {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    textarea {
+        font-size: 1.5rem;
+    }
+
+    .fit_content {
+        width: fit-content;
+        background-color: rgb(255, 241, 178);
+    }
+
+    .letter_spacing {
+        letter-spacing: 1px;
+    }
+
+    button {
+        background-color: $seal-brown;
+        border: 1px solid $seal-brown;
+        color: $coffee;
+        transition: all 0.3s;
+        &:hover {
+            background-color: #587667;
+            border: 1px solid #587667;
+        }
+    }
+}
