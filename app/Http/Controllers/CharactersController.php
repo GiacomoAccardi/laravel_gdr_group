@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Character;
+use App\Models\Type;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 
@@ -28,7 +29,8 @@ class CharactersController extends Controller
      */
     public function create()
     {
-        return view('characters.create');
+        $types = Type::all();
+        return view('characters.create', compact('types'));
     }
 
     /**
@@ -40,7 +42,7 @@ class CharactersController extends Controller
     public function store(StoreCharacterRequest $request)
     {
         Character::create($request->validated());
-        return redirect()->route('characters.index')->with('success', 'Character created successfully.');
+        return redirect()->route('characters.index')->with('success', 'Personaggio creato con successo.');
     }
 
     /**
@@ -62,9 +64,10 @@ class CharactersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    {   
+        $types = Type::all();
         $character = Character::findOrFail($id);
-        return view('characters.edit', compact('character'));
+        return view('characters.edit', compact('character', 'types'));
     }
 
     /**
@@ -77,7 +80,7 @@ class CharactersController extends Controller
     public function update(UpdateCharacterRequest $request, Character $character)
     {
         $character->update($request->validated());
-        return redirect()->route('characters.index')->with('success', 'Character updated successfully.');
+        return redirect()->route('characters.index')->with('success', 'Personaggio modificato con successo.');
     }
 
     /**

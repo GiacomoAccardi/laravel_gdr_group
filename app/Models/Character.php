@@ -10,6 +10,8 @@ class Character extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description', 'strength', 'defence', 'speed', 'intelligence', 'life', 'slug'];
+
     public static function createSlug($x) {
         return Str::slug($x, '-');
     }
