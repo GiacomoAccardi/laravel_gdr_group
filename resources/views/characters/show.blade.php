@@ -11,7 +11,7 @@
                     <h1 class="text-center">{{ $character['name'] }}</h1>
                     <p class="text-center fs-1 fw-bolder">{{ $character['description'] }}</p>
                     
-                    <div class="text-center character-stats">
+                    <div class="text-center stats">
                         <h4>Strength: {{ $character['strength'] }}</h4>
                         <h4>Defence: {{ $character['defence'] }}</h4>
                         <h4>Speed: {{ $character['speed'] }}</h4>

@@ -4,7 +4,7 @@
 <div class="bg-charachters">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 index-page">
+            <div class="col-12 col-md-12 col-lg-6 index-page">
                 <div class="text-end mb-3">
                     <a href="{{ route('characters.create') }}" class="btn-personal btn-create"><i class="bi bi-plus-square-fill"></i>Nuovo personaggio</a>
                 </div> 
@@ -12,12 +12,11 @@
                 <div class="list-group">
                     <!-- Ciclo sui personaggi -->
                     @foreach($characters as $character)
-                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
                         <!-- Nome del personaggio a sinistra -->
-                        <span class="fs-2">{{ $character->name }}</span>
+                        <span class="fs-4">{{ $character->name }}</span> 
 
-                        <!-- Pulsanti a destra -->
-                        <div>
+                        <div class="mt-3 mt-md-0">
                             <!-- Link per visualizzare i dettagli del personaggio -->
                             <a href="{{ route('characters.show', ['character' => $character->id]) }}" class="btn-personal btn-show"><i class="bi bi-eye-fill"></i>Dettagli</a>
 

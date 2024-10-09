@@ -13,7 +13,6 @@
         margin-bottom: 20px;
     }
 
-
     .list-group-item {
         background-color: #a7a058;
         border: 8px solid #5b4c32;
@@ -92,8 +91,8 @@
 .bg-charachters {
     background-image: url('images/characters.jpg');
     background-size: 100%;
-    background-position: 40% 25%;
-    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    background-repeat: repeat;
 }
 
 .bg-items {
@@ -101,4 +100,25 @@
     background-size: 100%;
     background-position: 40% 25%;
     background-repeat: repeat;
+}
+
+@media (max-width: 768px) {
+    .index-page {
+        padding: 15px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .btn-personal {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+
+        .list-group-item {
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }

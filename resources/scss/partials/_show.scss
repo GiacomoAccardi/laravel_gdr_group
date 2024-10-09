@@ -28,7 +28,7 @@
         text-shadow: 1px 1px 2px #cfcfc8;
     }
 
-    .character-stats {
+    .stats {
         text-align: center;
     }
 
@@ -75,5 +75,12 @@
     background-image: url('/images/show1.jpg');
     background-size: 145%;
     background-position: 50% 30%;
+    background-repeat: no-repeat;
+}
+
+.bg-show-items {
+    background-image: url('/images/show2.jpg');
+    background-size: 145%;
+    background-position: 55% 20%;
     background-repeat: no-repeat;
 }
