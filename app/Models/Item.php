@@ -10,6 +10,8 @@ class Item extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'category', 'type', 'weight', 'cost', 'dice', 'slug'];
+
     public static function createSlug($x) {
         return Str::slug($x, '-');
     }

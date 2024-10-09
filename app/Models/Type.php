@@ -10,6 +10,8 @@ class Type extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'image', 'description', 'slug'];
+
     public static function createSlug($x) {
         return Str::slug($x, '-');
     }
