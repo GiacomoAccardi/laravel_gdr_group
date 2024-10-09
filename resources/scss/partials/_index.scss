@@ -1,6 +1,5 @@
 .index-page {
     font-family: 'Dungeon', sans-serif;
-    background-color: #e9e09f;
     padding: 30px;
     color: #8e7444;
 
@@ -16,13 +15,14 @@
 
     .list-group-item {
         background-color: #a7a058;
-        border: 4px solid #999886;
-        margin-bottom: 15px;
-        padding: 15px;
-        border-radius: 8px;
+        border: 8px solid #5b4c32;
+        border-radius: 12px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 0 0 5px #766544;
+        border-image: linear-gradient(to bottom, #8e7444, #5b4c32, #8e7444) 1;
 
         &:hover {
             background-color: #f6df8f;
+            transform: scale(1.02);
         }
 
         span {
@@ -40,7 +40,7 @@
         border: none;
         font-size: 18px;
         transition: all 0.3s;
-        
+
         i {
             color: #fff;
             margin-right: 3px;
@@ -55,6 +55,7 @@
         &.btn-create {
             background-color: #999886;
             font-size: 26px;
+
             &:hover {
                 background-color: #f1851e;
             }
@@ -79,8 +80,44 @@
         &.del-btn {
             background-color: #a66e53;
             border-radius: 0;
+
             &:hover {
                 background-color: #d47c50;
+            }
+        }
+    }
+}
+
+.bg-charachters {
+    background-image: url('images/characters.jpg');
+    background-size: 100%;
+    background-position: 50% 25%;
+    background-repeat: repeat;
+}
+
+.bg-items {
+    background-image: url('images/items.jpg');
+    background-size: 100%;
+    background-position: 40% 25%;
+    background-repeat: repeat;
+}
+
+@media (max-width: 768px) {
+    .index-page {
+        padding: 15px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .btn-personal {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+
+        .list-group-item {
+            span {
+                font-size: 1.2rem;
             }
         }
     }
