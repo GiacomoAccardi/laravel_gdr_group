@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('speed');
             $table->integer('intelligence');
             $table->integer('life');
+            $table->string('slug');
             $table->timestamps();
         });
     }
