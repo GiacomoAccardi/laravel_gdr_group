@@ -42,7 +42,7 @@ class CharactersController extends Controller
     public function store(StoreCharacterRequest $request)
     {
         Character::create($request->validated());
-        return redirect()->route('characters.index')->with('success', 'Character created successfully.');
+        return redirect()->route('characters.index')->with('success', 'Personaggio creato con successo.');
     }
 
     /**
@@ -80,7 +80,7 @@ class CharactersController extends Controller
     public function update(UpdateCharacterRequest $request, Character $character)
     {
         $character->update($request->validated());
-        return redirect()->route('characters.index')->with('success', 'Character updated successfully.');
+        return redirect()->route('characters.index')->with('success', 'Personaggio modificato con successo.');
     }
 
     /**
