@@ -13,4 +13,8 @@ class Item extends Model
     public static function createSlug($x) {
         return Str::slug($x, '-');
     }
+
+    public function character() {
+        return $this->belongsTo(Character::class);
+    }
 }
