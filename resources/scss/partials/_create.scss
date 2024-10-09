@@ -16,6 +16,7 @@
 
     label {
         letter-spacing: 3px;
+        color: #fff;
         text-shadow:
             -1px -1px 10px #587667,
             1px -1px 10px #587667,
@@ -48,6 +49,17 @@
 
     .letter_spacing {
         letter-spacing: 1px;
+    }
+
+    .gif-box {
+        display: flex;
+        justify-content: center;
+        max-width: 200px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
     }
 
     button {

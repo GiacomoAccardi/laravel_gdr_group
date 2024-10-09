@@ -23,11 +23,6 @@
                         <div class="col-12 col-md-6">
                             <div class="form-group py-2">
                                 <label for="type_id" class="fs-2 fw-semibold">Classe</label>
-                                {{-- prova anteprima --}}
-                                <div class="mb-2 img-preview">
-                                    <img src="" alt="Character's preview" class="d-none selected-img">
-                                </div>
-
                                 <select name="type_id" class="form-control rounded-0 type_id @error('type_id') is-invalid @enderror" required>
                                     <option value="">Seleziona la classe</option>
                                     @foreach($types as $type)
@@ -112,6 +107,10 @@
                             </div>
                          
                         </div>
+                    </div>
+                    {{-- prova anteprima --}}
+                    <div class="mb-2 img-preview gif-box mx-auto">
+                        <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
                     <div class="py-3">
                         <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing mt-3">Genera</button>
