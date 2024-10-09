@@ -27,7 +27,7 @@ class CharactersTableSeeder extends Seeder
             $new_character->speed = $character['speed'];
             $new_character->intelligence = $character['intelligence'];
             $new_character->life = $character['life'];
-            $new_character->type_id = $character['type_id'];
+            $new_character->slug = Character::createSlug($new_character->name);
 
             $new_character->save();
         }

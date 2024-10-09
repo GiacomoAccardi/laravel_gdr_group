@@ -10,7 +10,11 @@ class Type extends Model
 {
     use HasFactory;
 
-    public static function createSlug($data) {
-        return Str::slug($data, '-');
+    public static function createSlug($x) {
+        return Str::slug($x, '-');
+    }
+
+    public function characters() {
+        return $this->hasMany(Character::class);
     }
 }
