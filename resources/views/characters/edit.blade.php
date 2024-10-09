@@ -3,14 +3,12 @@
 @section('content')
 
     <section id="create_page">
-        <div class="container text-center">
-            <h1 class="bg-warning mb-3">
-                Genera qui il tuo combattente!
+        <div class="overlay-blur"></div>
+        <div class="container text-center z-2 position-relative">
+            <h1 class="p-0 mb-3">
+                Riscrivi qui il tuo combattente!
             </h1>
-            <div class="d-flex justify-content-center">
-                <h1 class="align-self-center fit_content w-25">
-                    Qui, prima o poi, si potra' caricare l'immagine del pg che si vorra' creare
-                </h1>
+            <div class="d-flex justify-content-center p-5">
                 <form action="{{ route('characters.store') }}" method="post" class="w-75">
                     @csrf
                     @method('PUT')
@@ -88,8 +86,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="py-3">
+                    <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
                         <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Genera</button>
+                        <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold ms-3 py-0">
+                            <i class="bi bi-arrow-left"></i> Ci devo pensare !
+                        </a>
                     </div>
                 </form>
             </div>
