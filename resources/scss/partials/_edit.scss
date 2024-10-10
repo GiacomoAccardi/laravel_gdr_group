@@ -1,28 +1,21 @@
 #edit_page {
     font-family: 'Dungeon', sans-serif;
-    background-image: url('/img/land\(2\).jpg');
+    background-image: url('/img/edit_room.jpeg');
     background-size: cover;
     padding: 110px 0;
     position: relative;
 
-    .overlay-blur {
-        position: absolute; // Assicurati che l'elemento copra l'area desiderata
-        top: 10%;
-        left: 10%;
-        right: 10%;
-        bottom: 15%;
-        // transform: translate(-50%, -50%);
-        background: rgba(255, 255, 255, 0); // Leggera trasparenza per un colore di sfondo
-        backdrop-filter: blur(5px); // Applica un effetto di sfocatura
-        -webkit-backdrop-filter: blur(5px); // Compatibilità per browser WebKit
-        border-radius: 25px;
-        z-index: 1; // Assicurati che l'overlay stia sopra l'immagine di sfondo ma sotto il contenuto
+    #overlay_effect {
+        background-color: rgba(237, 197, 122, 0.2);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 8px;
     }
 
     h1 {
         font-size: 4rem;
         text-align: center;
-        color: #5b4c32;
+        color: $black-pepper;
         text-shadow: 1px 1px 2px #999886;
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -68,7 +61,7 @@
     .gif-box {
         display: flex;
         justify-content: center;
-        max-width: 200px;
+        max-width: 300px;
         img {
             max-width: 100%;
             max-height: 100%;

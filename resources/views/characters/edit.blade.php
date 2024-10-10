@@ -3,12 +3,14 @@
 @section('content')
 
     <section id="edit_page">
-        <div class="overlay-blur"></div>
-        <div class="container text-center z-2 position-relative">
+        <div id="overlay_effect" class="container text-center z-2 position-relative">
             <h1 class="p-0 m-0">
                 Riscrivi qui il tuo combattente!
             </h1>
-            <div class="d-flex justify-content-center p-4">
+            <div class="d-flex justify-content-center align-items-center p-4">
+                <div class="mb-2 img-preview gif-box mx-auto">
+                    <img src="" alt="Character's preview" class="d-none selected-img">
+                </div>
                 <form action="{{ route('characters.store') }}" method="post" class="w-75">
                     @csrf
                     @method('PUT')
@@ -30,8 +32,8 @@
                                     class="form-control rounded-0 type_id @error('type_id') is-invalid @enderror" required>
                                     <option value="">Seleziona la classe</option>
                                     @foreach ($types as $type)
-                                        <option value="{{ $type->id }}" data-img="{{ asset($type->image) }}">
-                                            {{ old('type_id') == $type->id ? ' selected' : '' }}
+                                        <option value="{{ old('type_id', $type->id) }}" data-img="{{ asset($type->image) }}">
+                                            {{ old('type_id', $type->id) }}
                                             {{ $type->name }}
                                         </option>
                                     @endforeach
@@ -113,10 +115,6 @@
                                 @enderror
                             </div>
                         </div>
-                    </div>
-                    {{-- prova anteprima --}}
-                    <div class="mb-2 img-preview gif-box mx-auto">
-                        <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
                     <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
                         <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Genera</button>

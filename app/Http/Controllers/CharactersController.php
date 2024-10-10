@@ -60,7 +60,7 @@ class CharactersController extends Controller
      */
     public function show($id)
     {
-        $character = Character::findOrFail($id);
+        $character = Character::with('type')->findOrFail($id);
         return view('characters.show', compact('character'));
     }
 
