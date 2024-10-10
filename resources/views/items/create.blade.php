@@ -17,7 +17,7 @@
                                     <input type="text" class="form-control rounded-0 @error('name') is-invalid @enderror"
                                         id="name" name="name" value="" required>
                                     @error('name')
-                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="alert alert-danger fs-4">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                                     </select>
                                 </div>
                                 @error('type_id')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-4 col-md-12">
@@ -51,7 +51,7 @@
                                     </select>
                                 </div>
                                 @error('type_id')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-4 col-md-12">
@@ -67,7 +67,7 @@
                                     </select>
                                 </div>
                                 @error('type_id')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                         class="form-control rounded-0 @error('weight') is-invalid @enderror" id="weight"
                                         name="weight" rows="3" required>
                                     @error('weight')
-                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="alert alert-danger fs-4">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                         class="form-control rounded-0 @error('cost') is-invalid @enderror" id="cost"
                                         name="cost" rows="3" required>
                                     @error('cost')
-                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="alert alert-danger fs-4">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
