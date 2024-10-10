@@ -88,7 +88,7 @@ class ItemsController extends Controller
     {
         $form_data = $request->validated();
 
-        $form_data['slug'] = Item::generateSlug($form_data['name'], '-');
+        $form_data['slug'] = Item::createSlug($form_data['name']);
 
         $item->update($form_data);
 
