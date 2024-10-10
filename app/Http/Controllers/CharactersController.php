@@ -71,8 +71,8 @@ class CharactersController extends Controller
      */
     public function edit($id)
     {   
+        $character = Character::with('type')->findOrFail($id);
         $types = Type::all();
-        $character = Character::findOrFail($id);
         return view('characters.edit', compact('character', 'types'));
     }
 
