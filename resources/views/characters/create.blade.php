@@ -3,7 +3,7 @@
 @section('content')
 
     <section id="create_page">
-        <div id="overlay_effect" class="container text-center z-2 position-relative">
+        <div id="overlay_effect" class="container text-center">
             <h1 class="p-0 m-0">
                 Genera qui il tuo combattente!
             </h1>

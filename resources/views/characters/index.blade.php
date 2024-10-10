@@ -4,7 +4,7 @@
     <div class="bg-charachters">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 index-page bg-panel my-5">
+                <div id="overlay_effect" class="col-12 col-md-8 my-5">
                     <div class="d-flex justify-content-center mb-3">
                         <h1>Lista dei personaggi</h1>
                     </div>
