@@ -6,7 +6,7 @@
             <div class="row justify-content-center">
                 <div id="overlay_effect" class="col-12 col-md-8 bg-panel my-5">
                     <div class="d-flex justify-content-center mb-3">
-                        <h1>Lista dgli oggetti</h1>
+                        <h1>Lista degli oggetti</h1>
                     </div>
                     <div class="text-end mt-4 mb-3">
                         <a href="{{ route('items.create') }}" class="btn-personal btn-create"><i

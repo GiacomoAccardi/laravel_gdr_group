@@ -1,11 +1,11 @@
-<footer class="py-2">
+<footer class="py-4">
     <div class="container">
         <div class="row d-flex flex-nowrap">
             <div class="col-4">
                 <a href="{{ route('about') }}" class=" text-decoration-none text-dark">
                     <h5 class="fs-2 text-center fw-bolder">Su di noi</h5>
                 </a>
-                <p class="text-center">"Una compagnia di avventurieri audaci, legati dal destino, si unisce come cavalieri attorno alla Tavola Rotonda. Ogni membro porta con sé la propria storia e abilitas, creando un'alleanza indissolubile."</p>
+                <p class="text-center fs-5">"Una compagnia di avventurieri audaci, legati dal destino, si unisce come cavalieri attorno alla Tavola Rotonda. Ogni membro porta con se' la propria storia e abilitas, creando un'alleanza indissolubile."</p>
             </div>
             <div class="col-4">
                 <ul class="list-unstyled justify-content-between footer-menu">
