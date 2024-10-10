@@ -58,7 +58,7 @@
                                         method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn-personal del-btn"
+                                        <button type="submit" class="btn-personal del-btn characters-del"
                                             data-pg-name="{{ $character->name }}"><i class="bi bi-trash2"></i></button>
                                     </form>
                                 </div>

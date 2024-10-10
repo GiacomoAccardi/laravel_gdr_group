@@ -6,11 +6,32 @@ import.meta.glob(["../img/**"]);
 
 //eliminazione
 const delBtns = document.querySelectorAll(".del-btn");
+// altra eliminazione poi vedere ottimizzazione
+const delFromShow = document.querySelectorAll(".characters-del")
 //cambio preview al cambio della classe nella select
 const selectTypeBtns = document.querySelectorAll('.type_id')
 
 //gestione modale per eliminazione
 delBtns.forEach((btn) => {
+    btn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+
+        const delModal = document.getElementById("destroyModal");
+        let newModal = new bootstrap.Modal(delModal);
+        newModal.show();
+
+        const pgs_name = btn.getAttribute("data-pg-name");
+        let modalAlert = document.getElementById("modal-text");
+        modalAlert.innerText = `Sei ben certo di voler bandire ${pgs_name}?`;
+
+        const confirm = document.getElementById("confirm-del");
+        confirm.addEventListener("click", function () {
+            btn.parentElement.submit();
+        });
+    });
+});
+
+delFromShow.forEach((btn) => {
     btn.addEventListener('click', function (ev) {
         ev.preventDefault();
 

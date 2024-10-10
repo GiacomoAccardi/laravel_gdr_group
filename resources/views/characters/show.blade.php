@@ -33,8 +33,7 @@
                                 class="d-inline p-0">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0"
-                                    onclick="return confirm('Sei sicuro di voler cancellare questo personaggio?')">Bandisci</button>
+                                <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0 characters-del" data-pg-name="{{ $character->name }}">Bandisci</button>
                             </form>
                         </div>
                     </div>
@@ -42,4 +41,5 @@
             </div>
         </div>
     </div>
+    @include('characters.partials.destroy_modal')
 @endsection
