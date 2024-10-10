@@ -9,7 +9,8 @@
                         {{-- <img src="" alt="{{ $item['name'] }}" class="img-fluid rounded shadow"> --}}
                     </div>
                     <h1 class="text-center">{{ $item['name'] }}</h1>
-                    <p class="text-center fs-1 fw-bolder">{{ $item['category'] }}</p>
+                    <p class="text-center fs-1 fw-bolder">{{ $item['category'] ?? '' }}</p>
+
                     <p class="text-center fs-1 fw-bolder">{{ $item['type'] }}</p>
 
                     <div class="text-center stats">
