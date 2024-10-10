@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="img-preview gif-box mx-auto">
+                    <div class=" my-4 img-preview gif-box mx-auto">
                         <img src="" alt="Character's preview" class="d-none selected-img me-4">
                     </div>
                     <div class="py-3 mt-3 d-flex justify-content-center align-items-center">

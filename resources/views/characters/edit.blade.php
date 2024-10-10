@@ -7,7 +7,7 @@
             <h1 class="p-0 m-0">
                 Riscrivi qui il tuo combattente!
             </h1>
-            <div class="d-flex justify-content-center align-items-center p-4">
+            <div class="d-flex justify-content-center p-4">
                 <form action="{{ route('characters.store') }}" method="post" class="w-75">
                     @csrf
                     @method('PUT')
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-2 img-preview gif-box mx-auto">
+                    <div class="my-4 img-preview gif-box mx-auto">
                         <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
                     <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
