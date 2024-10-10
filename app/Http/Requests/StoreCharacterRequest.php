@@ -13,7 +13,7 @@ class StoreCharacterRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -31,23 +31,24 @@ class StoreCharacterRequest extends FormRequest
             'speed' => 'required|integer|max:15',
             'intelligence' => 'required|integer|max:15',
             'life' => 'required|integer|max:130',
+            'type_id' => 'nullable'
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => 'Madama o Messere, voi dovete fornire il vostro nome, ché sconosciuto non può restare.',
-            'name.max' => 'Madama o Messere, il nome non può eccedere la misura di 200 segni, ché così lungo non potrà esser accolto.',
-            'strength.required' => 'Madama o Messere, gentilmente esplicitate la vostra forza, ché non può restar celata.',
+            'name.required' => 'Madama o Messere, voi dovete fornire il vostro nome, che\' sconosciuto non puo\' restare.',
+            'name.max' => 'Madama o Messere, il nome non puo\' eccedere la misura di 200 segni, che\' così lungo non potra\' esser accolto.',
+            'strength.required' => 'Madama o Messere, gentilmente esplicitate la vostra forza, che\' non puo\' restar celata.',
             'strength.max' => 'Madama o Messere, impensabile che la vostra forza superi quella di un orso.',
-            'defence.required' => 'Madama o Messere, vi prego, esplicitate la vostra capacità di difendervi, ché non può restare ignota.',
+            'defence.required' => 'Madama o Messere, vi prego, esplicitate la vostra capacità di difendervi, che\' non puo\' restare ignota.',
             'defence.max' => 'Madama o Messere, non crediate di avere una pelle più dura e resistente di un cinghiale.',
-            'speed.required' => 'Madama o Messere, esplicitate la vostra capacità di corsa, ché essa non può rimanere celata.',
+            'speed.required' => 'Madama o Messere, esplicitate la vostra capacità di corsa, che\' essa non puo\' rimanere celata.',
             'speed.max' => 'Madama o Messere, stento a credere che possiate correre più veloce di un destriero.',
-            'intelligence.required' => 'Madama o Messere, esplicitate il vostro intelletto, ché esso non può rimanere celato.',
+            'intelligence.required' => 'Madama o Messere, esplicitate il vostro intelletto, che\' esso non puo\' rimanere celato.',
             'intelligence.max' => 'Madama o Messere, credete di essere più astuti di una volpe?',
-            'life.required' => 'Madame o Messere, esplicitate la vostra capacità vitale, ché essa non può rimanere celata.',
+            'life.required' => 'Madame o Messere, esplicitate la vostra capacità vitale, che\' essa non puo\' rimanere celata.',
             'life.max' => 'Madama o Messere, difficilmente potrete vivere a lungo come una tartaruga centenaria.'
         ];
     }

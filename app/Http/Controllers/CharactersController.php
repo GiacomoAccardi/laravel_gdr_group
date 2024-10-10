@@ -41,7 +41,14 @@ class CharactersController extends Controller
      */
     public function store(StoreCharacterRequest $request)
     {
-        Character::create($request->validated());
+        $data = $request->validated();
+
+        // Genera lo slug usando il nome del personaggio
+        $data['slug'] = Character::createSlug($data['name']); 
+    
+        // Crea il personaggio con i dati validati
+        Character::create($data);
+        
         return redirect()->route('characters.index')->with('success', 'Personaggio creato con successo.');
     }
 

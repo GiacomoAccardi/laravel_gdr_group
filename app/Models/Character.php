@@ -10,13 +10,25 @@ class Character extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'strength', 'defence', 'speed', 'intelligence', 'life', 'slug'];
+    protected $fillable = [
+        'name',
+        'description',
+        'strength',
+        'defence',
+        'speed',
+        'intelligence',
+        'life',
+        'slug',
+        'type_id'
+    ];
 
-    public static function createSlug($x) {
+    public static function createSlug($x)
+    {
         return Str::slug($x, '-');
     }
 
-    public function type() {
+    public function type()
+    {
         return $this->belongsTo(Type::class);
     }
 }
