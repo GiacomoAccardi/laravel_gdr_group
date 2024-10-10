@@ -17,8 +17,7 @@ class CharactersController extends Controller
      */
     public function index()
     {
-        $characters = Character::all();
-
+        $characters = Character::with('type')->get();
         return view('characters.index', compact('characters'));
     }
 

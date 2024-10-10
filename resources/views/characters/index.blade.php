@@ -19,7 +19,11 @@
                             <div
                                 class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
                                 <!-- Nome del personaggio a sinistra -->
-                                <span>{{ $character->name }}</span>
+                                <div>
+                                    <span>{{ $character->name }}</span>
+                                    <span class="mx-2 text-warning-emphasis">{{ $character->type->name ?? 'Non Definito' }}</span>
+                                    <span class="text-success">HP: {{ $character->life }}</span>
+                                </div>
 
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli del personaggio -->
