@@ -17,8 +17,7 @@ class CharactersController extends Controller
      */
     public function index()
     {
-        $characters = Character::all();
-
+        $characters = Character::with('type')->get();
         return view('characters.index', compact('characters'));
     }
 
@@ -41,7 +40,14 @@ class CharactersController extends Controller
      */
     public function store(StoreCharacterRequest $request)
     {
-        Character::create($request->validated());
+        $data = $request->validated();
+
+        // Genera lo slug usando il nome del personaggio
+        $data['slug'] = Character::createSlug($data['name']); 
+    
+        // Crea il personaggio con i dati validati
+        Character::create($data);
+        
         return redirect()->route('characters.index')->with('success', 'Personaggio creato con successo.');
     }
 
@@ -53,7 +59,7 @@ class CharactersController extends Controller
      */
     public function show($id)
     {
-        $character = Character::findOrFail($id);
+        $character = Character::with('type')->findOrFail($id);
         return view('characters.show', compact('character'));
     }
 
