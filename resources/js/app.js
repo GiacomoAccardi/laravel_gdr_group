@@ -4,19 +4,96 @@ import "~icons/bootstrap-icons.scss";
 import * as bootstrap from "bootstrap";
 import.meta.glob(["../img/**"]);
 
-// eliminazione personaggio
-const delChBtns = document.querySelectorAll(".del-btn");
-// eliminazione personaggio in show
-const delChFromShow = document.querySelectorAll(".characters-del")
-// eliminazione oggetto
-const delObBtns = document.querySelectorAll(".obj-delete")
-// eliminazione oggetto in show
-const delObFromShow = document.querySelectorAll(".object-show-delete")
 //cambio preview al cambio della classe nella select
 const selectTypeBtns = document.querySelectorAll('.type_id')
 
-//gestione modale per eliminazione
-delChBtns.forEach((btn) => {
+// // eliminazione personaggio
+// const delChBtns = document.querySelectorAll(".del-btn");
+// // eliminazione personaggio in show
+// const delChFromShow = document.querySelectorAll(".characters-del")
+// // eliminazione oggetto
+// const delObBtns = document.querySelectorAll(".obj-delete")
+// // eliminazione oggetto in show
+// const delObFromShow = document.querySelectorAll(".object-show-delete")
+
+// //gestione modale per eliminazione
+// delChBtns.forEach((btn) => {
+//     btn.addEventListener('click', function (ev) {
+//         ev.preventDefault();
+
+//         const delModal = document.getElementById("destroyModal");
+//         let newModal = new bootstrap.Modal(delModal);
+//         newModal.show();
+
+//         const pgs_name = btn.getAttribute("data-pg-name");
+//         let modalAlert = document.getElementById("modal-text");
+//         modalAlert.innerText = `Sei ben certo di voler bandire ${pgs_name}?`;
+
+//         const confirm = document.getElementById("confirm-del");
+//         confirm.addEventListener("click", function () {
+//             btn.parentElement.submit();
+//         });
+//     });
+// });
+
+// delChFromShow.forEach((btn) => {
+//     btn.addEventListener('click', function (ev) {
+//         ev.preventDefault();
+
+//         const delModal = document.getElementById("destroyModal");
+//         let newModal = new bootstrap.Modal(delModal);
+//         newModal.show();
+
+//         const pgs_name = btn.getAttribute("data-pg-name");
+//         let modalAlert = document.getElementById("modal-text");
+//         modalAlert.innerText = `Sei ben certo di voler bandire ${pgs_name}?`;
+
+//         const confirm = document.getElementById("confirm-del");
+//         confirm.addEventListener("click", function () {
+//             btn.parentElement.submit();
+//         });
+//     });
+// });
+
+// delObBtns.forEach((btn) => {
+//     btn.addEventListener('click', function (ev) {
+//         ev.preventDefault();
+
+//         const delModal = document.getElementById("destroyModal");
+//         let newModal = new bootstrap.Modal(delModal);
+//         newModal.show();
+
+//         const obj_name = btn.getAttribute("data-obj-name");
+//         let modalAlert = document.getElementById("modal-text");
+//         modalAlert.innerText = `Sei ben certo di voler bandire ${obj_name}?`;
+
+//         const confirm = document.getElementById("confirm-del");
+//         confirm.addEventListener("click", function () {
+//             btn.parentElement.submit();
+//         });
+//     });
+// });
+
+// delObFromShow.forEach((btn) => {
+//     btn.addEventListener('click', function (ev) {
+//         ev.preventDefault();
+
+//         const delModal = document.getElementById("destroyModal");
+//         let newModal = new bootstrap.Modal(delModal);
+//         newModal.show();
+
+//         const obj_name = btn.getAttribute("data-obj-name");
+//         let modalAlert = document.getElementById("modal-text");
+//         modalAlert.innerText = `Sei ben certo di voler bandire ${obj_name}?`;
+
+//         const confirm = document.getElementById("confirm-del");
+//         confirm.addEventListener("click", function () {
+//             btn.parentElement.submit();
+//         });
+//     });
+// });
+
+function deletion(btn, entity) {
     btn.addEventListener('click', function (ev) {
         ev.preventDefault();
 
@@ -24,73 +101,34 @@ delChBtns.forEach((btn) => {
         let newModal = new bootstrap.Modal(delModal);
         newModal.show();
 
-        const pgs_name = btn.getAttribute("data-pg-name");
+        const data_name = btn.getAttribute(`data-${entity}-name`);
         let modalAlert = document.getElementById("modal-text");
-        modalAlert.innerText = `Sei ben certo di voler bandire ${pgs_name}?`;
+
+        if(entity === 'pg') {
+            modalAlert.innerText = `Siete certo di voler bandire ${data_name}?`;
+        } else if(entity === 'obj') {
+            modalAlert.innerText = `Sicuro di volerVi disfare di ${data_name}?`;
+        }
 
         const confirm = document.getElementById("confirm-del");
         confirm.addEventListener("click", function () {
             btn.parentElement.submit();
-        });
+        })
     });
-});
+}
 
-delChFromShow.forEach((btn) => {
-    btn.addEventListener('click', function (ev) {
-        ev.preventDefault();
+// listener
+function deleteEvent(buttons, entity) {
+    buttons.forEach((btn) => deletion(btn, entity));
+}
 
-        const delModal = document.getElementById("destroyModal");
-        let newModal = new bootstrap.Modal(delModal);
-        newModal.show();
+// Delete pgs
+deleteEvent(document.querySelectorAll(".del-btn"), "pg");
+deleteEvent(document.querySelectorAll(".characters-del"), "pg");
 
-        const pgs_name = btn.getAttribute("data-pg-name");
-        let modalAlert = document.getElementById("modal-text");
-        modalAlert.innerText = `Sei ben certo di voler bandire ${pgs_name}?`;
-
-        const confirm = document.getElementById("confirm-del");
-        confirm.addEventListener("click", function () {
-            btn.parentElement.submit();
-        });
-    });
-});
-
-delObBtns.forEach((btn) => {
-    btn.addEventListener('click', function (ev) {
-        ev.preventDefault();
-
-        const delModal = document.getElementById("destroyModal");
-        let newModal = new bootstrap.Modal(delModal);
-        newModal.show();
-
-        const obj_name = btn.getAttribute("data-obj-name");
-        let modalAlert = document.getElementById("modal-text");
-        modalAlert.innerText = `Sei ben certo di voler bandire ${obj_name}?`;
-
-        const confirm = document.getElementById("confirm-del");
-        confirm.addEventListener("click", function () {
-            btn.parentElement.submit();
-        });
-    });
-});
-
-delObFromShow.forEach((btn) => {
-    btn.addEventListener('click', function (ev) {
-        ev.preventDefault();
-
-        const delModal = document.getElementById("destroyModal");
-        let newModal = new bootstrap.Modal(delModal);
-        newModal.show();
-
-        const obj_name = btn.getAttribute("data-obj-name");
-        let modalAlert = document.getElementById("modal-text");
-        modalAlert.innerText = `Sei ben certo di voler bandire ${obj_name}?`;
-
-        const confirm = document.getElementById("confirm-del");
-        confirm.addEventListener("click", function () {
-            btn.parentElement.submit();
-        });
-    });
-});
+// Delete objs
+deleteEvent(document.querySelectorAll(".obj-delete"), "obj");
+deleteEvent(document.querySelectorAll(".object-show-delete"), "obj");
 
 //gestione anteprima
 selectTypeBtns.forEach((selectType) => {
