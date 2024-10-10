@@ -8,7 +8,7 @@
                 <p class="text-center">"Una compagnia di avventurieri audaci, legati dal destino, si unisce come cavalieri attorno alla Tavola Rotonda. Ogni membro porta con sé la propria storia e abilitas, creando un'alleanza indissolubile."</p>
             </div>
             <div class="col-4">
-                <ul class="list-unstyled d-flex justify-content-between">
+                <ul class="list-unstyled justify-content-between footer-menu">
                     <li><a href="{{ route('homepage') }}" class=" fs-4 text-decoration-none text-dark  fw-bolder">Home</a></li>
                     <li><a href="{{ route('contacts') }}" class=" fs-4 text-decoration-none text-dark  fw-bolder">Contact</a></li> 
                     <li><a href="" class="fs-4 text-decoration-none text-dark fw-bolder">Privacy</a></li>
