@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Http\Requests\StoreItemRequest;
+use App\Http\Requests\UpdateItemRequest;
 
 class ItemsController extends Controller
 {
@@ -24,9 +26,8 @@ class ItemsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create(){
+        return view('items.create');
     }
 
     /**
@@ -35,9 +36,10 @@ class ItemsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreItemRequest $request)
     {
-        //
+        Item::create($request->validated());
+        return redirect()->route('item.index')->with('success', 'Arma creata con successo.');
     }
 
     /**
@@ -70,9 +72,10 @@ class ItemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateItemRequest $request, Item $item)
     {
-        //
+        $item->update($request->validated());
+        return redirect()->route('items.index')->with('success', 'Arma modificata con successo.');
     }
 
     /**
