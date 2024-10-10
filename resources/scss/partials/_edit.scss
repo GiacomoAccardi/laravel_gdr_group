@@ -1,9 +1,18 @@
-#create_page {
+#edit_page {
     font-family: 'Dungeon', sans-serif;
-    background-image: url('/img/land\(2\).jpg');
+    background-image: url('/images/land\(2\).jpg');
     background-size: cover;
     padding: 110px 0;
     position: relative;
+
+    label {
+        letter-spacing: 3px;
+        text-shadow:
+            -1px -1px 10px #587667,
+            1px -1px 10px #587667,
+            -1px 1px 10px #587667,
+            1px 1px 10px #587667;
+    }
 
     .overlay-blur {
         position: absolute; // Assicurati che l'elemento copra l'area desiderata
@@ -19,41 +28,24 @@
         z-index: 1; // Assicurati che l'overlay stia sopra l'immagine di sfondo ma sotto il contenuto
     }
 
-    h1 {
-        font-size: 4rem;
-        text-align: center;
-        color: #5b4c32;
-        text-shadow: 1px 1px 2px #999886;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-
-    label {
-        letter-spacing: 3px;
-        color: #fff;
-        text-shadow:
-            -1px -1px 10px #587667,
-            1px -1px 10px #587667,
-            -1px 1px 10px #587667,
-            1px 1px 10px #587667;
-    }
-
     input,
-    select,
     textarea {
         border: 2px solid $seal-brown;
     }
 
-    input[type='number'],
-    input[type='text'],
-    textarea,
-    select {
+    input[type='number'] {
+        font-size: 1.5rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    input[type='text'] {
         font-size: 1.5rem;
         text-align: center;
     }
 
-    input[type='number'] {
-        padding: 0;
+    textarea {
+        font-size: 1.5rem;
     }
 
     .fit_content {
@@ -65,23 +57,11 @@
         letter-spacing: 1px;
     }
 
-    .gif-box {
-        display: flex;
-        justify-content: center;
-        max-width: 200px;
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
-    }
-
     button {
         background-color: $seal-brown;
         border: 1px solid $seal-brown;
         color: $coffee;
         transition: all 0.3s;
-
         &:hover {
             background-color: #587667;
             border: 1px solid #587667;
