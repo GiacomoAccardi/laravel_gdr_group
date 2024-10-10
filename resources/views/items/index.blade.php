@@ -23,18 +23,18 @@
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli dell'oggetto -->
                                     <a href="{{ route('items.show', ['item' => $item->id]) }}"
-                                        class="btn-personal btn-show"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
+                                        class="btn-personal my-2 btn-show"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
 
                                     <!-- Link per modificare l'oggetto -->
                                     <a href="{{ route('items.edit', ['item' => $item->id]) }}"
-                                        class="btn-personal btn-edit"><i class="bi bi-feather me-2"></i>Riscrivi</a>
+                                        class="btn-personal my-2 btn-edit me-3"><i class="bi bi-feather me-2"></i>Riscrivi</a>
 
                                     <!-- Form per eliminare l'oggetto -->
                                     <form action="{{ route('items.destroy', ['item' => $item->id]) }}" method="POST"
                                             class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit"class="btn-personal del-btn"
+                                        <button type="submit"class="btn-personal my-2 del-btn"
                                             data-pg-name="{{ $item->name }}">Bandisci</button>
                                     </form>
                                 </div>
@@ -43,18 +43,18 @@
                                 <div class="mt-3 mt-md-0 d-block d-lg-none">
                                     <!-- Link per visualizzare i dettagli dell'oggetto -->
                                     <a href="{{ route('items.show', ['item' => $item->id]) }}"
-                                        class="btn-personal btn-show"><i class="bi bi-eye-fill"></i></a>
+                                        class="btn-personal my-2 btn-show"><i class="bi bi-eye-fill"></i></a>
 
                                     <!-- Link per modificare l'oggetto -->
                                     <a href="{{ route('items.edit', ['item' => $item->id]) }}"
-                                        class="btn-personal btn-edit"><i class="bi bi-feather"></i></a>
+                                        class="btn-personal my-2 btn-edit me-3"><i class="bi bi-feather"></i></a>
 
                                     <!-- Form per eliminare l'oggetto -->
                                     <form action="{{ route('items.destroy', ['item' => $item->id]) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit"class="btn-personal del-btn"
+                                        <button type="submit"class="btn-personal my-2 del-btn"
                                                 data-pg-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
                                     </form>
                                 </div>
