@@ -9,6 +9,8 @@
 @import 'partials/show';
 @import 'partials/modal';
 @import 'partials/offcanvas';
+@import 'partials/footer';
+
 // font Dungeon: quello nell'header
 @import url('https://fonts.cdnfonts.com/css/dungeon'); // font-family: 'Dungeon', sans-serif;
 // font Cinzel
@@ -40,13 +42,16 @@ header {
 
         .dropdown-menu {
             background-color: $seal-brown;
+
             li {
                 background-color: $seal-brown;
                 transition: all 0.5s;
                 padding: 10px 5px;
+
                 &:hover {
                     background-color: $btns_hover;
                 }
+
                 a {
                     color: #fff;
                     font-size: 24px;
