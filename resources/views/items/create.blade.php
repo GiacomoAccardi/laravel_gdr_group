@@ -23,9 +23,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6 col-md-6">
+                        <div class="col-4 col-md-12">
                             <div class="form-group py-2">
-                                <label for="category" class="fs-2 fw-semibold">Seleziona la catgoria</label>
+                                <label for="category" class="fs-2 fw-semibold">Seleziona la categoria</label>
                                 <select name="category"
                                     class="form-control rounded-0 @error('category') is-invalid @enderror" required>
                                     <option value="category">Martial Melee Weapons</option>
@@ -36,7 +36,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-6 col-md-6">
+                        <div class="col-4 col-md-12">
                             <div class="form-group py-2">
                                 <label for="dice" class="fs-2 fw-semibold">Danno</label>
                                 <select name="dice" class="form-control rounded-0 @error('dice') is-invalid @enderror"
@@ -47,6 +47,18 @@
                                     <option value="dice">1d10</option>
                                     <option value="dice">1d12</option>
                                     <option value="dice">2d6</option>
+                                </select>
+                            </div>
+                            @error('type_id')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-4 col-md-12">
+                            <div class="form-group py-2">
+                                <label for="type" class="fs-2 fw-semibold">Tipologia</label>
+                                <select name="type" class="form-control rounded-0 @error('type') is-invalid @enderror"
+                                    required>
+                                    <option value="type">Weapons</option>
                                 </select>
                             </div>
                             @error('type_id')

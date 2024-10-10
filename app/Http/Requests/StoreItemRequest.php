@@ -24,10 +24,13 @@ class StoreItemRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string',
-            'category' => 'required',
+            'name' => 'required|string|max:200',
+            'category' => 'required|max:100',
             'weight' => 'required|numeric',
-            'dice' => 'required|string'
+            'cost' => 'required|numeric',
+            'dice' => 'required|string', 
+            'type' => 'required|string',
+            // 'slug' => 'required'
         ];
     }
 
@@ -38,7 +41,9 @@ class StoreItemRequest extends FormRequest
             'category.required' => 'Madama o Messere, gentilmente esplicitate la categoria della vostra arma, ché non può restar celata.',
             'weight.required' => 'Madama o Messere, gentilmente esplicitate il peso della vostra arma, ché non può restar celato.',
             'dice.required' => 'Madama o Messere, gentilmente esplicitate il danno della vostra arma, ché non può restar celato.',
-            
+            'cost.required' => 'Madama o Messere, gentilmente esplicitate il danno della vostra arma, ché non può restar celato.',
+            'type.required' => 'Madama o Messere, gentilmente esplicitate la tipologia, non può restar celata.',
+            'name.max' => 'Madama o Messere, voi dovete fornire un nome che sia lungo massimo 200 caratteri.'
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Item;
+
 class ItemsTableSeeder extends Seeder
 {
     /**
@@ -25,7 +26,7 @@ class ItemsTableSeeder extends Seeder
             $new_item->weight = intval(str_replace('lb.', '', $item['weight']));
             $new_item->cost = $item['cost'];
             $new_item->dice = $item['damage_dice'];
-            $new_item->slug = Item::createSlug($new_item->name);;
+            $new_item->slug = Item::createSlug($new_item->name);
 
             $new_item->save();
         }

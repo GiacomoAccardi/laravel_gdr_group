@@ -37,10 +37,22 @@ class ItemsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(StoreItemRequest $request)
-    {
-        Item::create($request->validated());
-        return redirect()->route('item.index')->with('success', 'Arma creata con successo.');
-    }
+{
+    // Ottieni i dati validati dalla richiesta
+    $form_data = $request->validated();
+
+    // Crea lo slug dal nome
+    $form_data['slug'] = Item::createSlug($form_data['name']);
+
+    $item = new Item();
+
+    $item->fill($form_data);
+
+    $item->save();
+    
+    // Reindirizza alla pagina degli items con un messaggio di successo
+    return redirect()->route('items.index')->with('success', 'Arma creata con successo.');
+}
 
     /**
      * Display the specified resource.
@@ -74,8 +86,7 @@ class ItemsController extends Controller
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
-        $item->update($request->validated());
-        return redirect()->route('items.index')->with('success', 'Arma modificata con successo.');
+
     }
 
     /**
