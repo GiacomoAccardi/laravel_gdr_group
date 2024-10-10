@@ -18,7 +18,7 @@
                                     <input type="text" class="form-control rounded-0 @error('name') is-invalid @enderror"
                                         id="name" name="name" value="{{ old('name', $item->name) }}" required>
                                     @error('name')
-                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="alert alert-danger fs-4">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -26,17 +26,16 @@
                         <div class="row">
                             <div class="col-4 col-md-12">
                                 <div class="form-group py-2">
-                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria d'arma (se il tuo
-                                        ogetto lo è)</label>
-                                    <select name="category"
+                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria del tuo oggetto</label>
+                                        <select name="category"
                                         class="form-control rounded-0 @error('category') is-invalid @enderror" required>
-                                        <option value="category">Not a weapon</option>
-                                        <option value="category">Martial Melee Weapons</option>
-                                        <option value="category">Martial Ranged Weapons</option>
+                                        <option value="Not a weapon" {{old('category') == 'Not a weapon' ? 'selected' : ''}}>Not a weapon</option>
+                                        <option value="Martial Melee Weapons" {{ old('category') == 'Martial Melee Weapons' ? 'selected' : '' }}>Martial Melee Weapons</option>
+                                        <option value="Martial Ranged Weapons" {{ old('category') == 'Martial Ranged Weapons' ? 'selected' : '' }}>Martial Ranged Weapons</option>
                                     </select>
                                 </div>
                                 @error('type_id')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-4 col-md-12">
@@ -44,16 +43,16 @@
                                     <label for="dice" class="fs-2 fw-semibold">Chance</label>
                                     <select name="dice"
                                         class="form-control rounded-0 @error('dice') is-invalid @enderror" required>
-                                        <option value="dice">1d4</option>
-                                        <option value="dice">1d6</option>
-                                        <option value="dice">1d8</option>
-                                        <option value="dice">1d10</option>
-                                        <option value="dice">1d12</option>
-                                        <option value="dice">2d6</option>
+                                        <option value="1d4" {{ old('dice') == '1d4' ? 'selected' : '' }}>1d4</option>
+                                        <option value="1d6" {{ old('dice') == '1d6' ? 'selected' : '' }}>1d6</option>
+                                        <option value="1d8" {{ old('dice') == '1d8' ? 'selected' : '' }}>1d8</option>
+                                        <option value="1d10" {{ old('dice') == '1d10' ? 'selected' : '' }}>1d10</option>
+                                        <option value="1d12" {{ old('dice') == '1d12' ? 'selected' : '' }}>1d12</option>
+                                        <option value="2d6" {{ old('dice') == '2d6' ? 'selected' : '' }}>2d6</option>
                                     </select>
                                 </div>
                                 @error('type_id')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-4 col-md-12">
@@ -61,15 +60,15 @@
                                     <label for="type" class="fs-2 fw-semibold">Tipologia</label>
                                     <select name="type"
                                         class="form-control rounded-0 @error('type') is-invalid @enderror" required>
-                                        <option value="type">Weapons</option>
-                                        <option value="type">Potions</option>
-                                        <option value="type">Projectile</option>
-                                        <option value="type">Miscellaneous</option>
-                                        <option value="type">Artifacts</option>
+                                        <option value="Weapons" {{ old('type') == 'Weapons' ? 'selected' : '' }}>Weapons</option>
+                                        <option value="Potions" {{ old('type') == 'Potions' ? 'selected' : '' }}>Potions</option>
+                                        <option value="Projectile" {{ old('type') == 'Projectile' ? 'selected' : '' }}>Projectile</option>
+                                        <option value="Miscellaneous" {{ old('type') == 'Miscellaneous' ? 'selected' : '' }}>Miscellaneous</option>
+                                        <option value="Artifacts" {{ old('type') == 'Artifacts' ? 'selected' : '' }}>Artifacts</option>
                                     </select>
                                 </div>
                                 @error('type_id')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
@@ -81,7 +80,7 @@
                                         class="form-control rounded-0 @error('weight') is-invalid @enderror" id="weight"
                                         name="weight" rows="3" value="{{ old('weight', $item->weight) }}" required>
                                     @error('weight')
-                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="alert alert-danger fs-4">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -92,7 +91,7 @@
                                         class="form-control rounded-0 @error('cost') is-invalid @enderror" id="cost"
                                         name="cost" rows="3" value="{{ old('cost', $item->cost) }}" required>
                                     @error('cost')
-                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="alert alert-danger fs-4">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>

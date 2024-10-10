@@ -9,11 +9,12 @@
                         {{-- <img src="" alt="{{ $item['name'] }}" class="img-fluid rounded shadow"> --}}
                     </div>
                     <h1 class="text-center">{{ $item['name'] }}</h1>
-                    <p class="text-center fs-1 fw-bolder">{{ $item['category'] }}</p>
+                    <p class="text-center fs-1 fw-bolder">{{ $item['category'] ?? '' }}</p>
+
                     <p class="text-center fs-1 fw-bolder">{{ $item['type'] }}</p>
 
                     <div class="text-center stats">
-                        <h4>Weight: {{ $item['weight'] }} kg</h4>
+                        <h4>Weight: {{ $item['weight'] }} lb</h4>
                         <h4>Cost: {{ $item['cost'] }} gold</h4>
                         <h4>Dice: {{ $item['dice'] }}</h2>
                             <div class="d-flex justify-content-center align-items-center pt-2">

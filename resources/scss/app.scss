@@ -47,12 +47,15 @@ header {
                 background-color: $seal-brown;
                 transition: all 0.5s;
                 padding: 10px 5px;
+                display: block;
 
                 &:hover {
                     background-color: $btns_hover;
                 }
 
                 a {
+                    display: block;
+                    width: 100%;
                     color: #fff;
                     font-size: 24px;
                     padding: 0 10px;
