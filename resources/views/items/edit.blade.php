@@ -1,0 +1,116 @@
+@extends('layouts.app')
+
+@section('content')
+    <section id="create_page">
+        <div id="overlay_effect" class="container text-center">
+            <div class="container text-center z-2 position-relative">
+                <h1 class="p-0 m-0">
+                    Modifica il tuo oggetto
+                </h1>
+                <div class="d-flex justify-content-center p-4">
+                    <form action="{{ route('items.update', ['item' => $item->id]) }}" method="POST" class="w-75">
+                        @csrf
+                        @method('PUT')
+                        <div class="row text-white justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group py-2">
+                                    <label for="name" class="fs-2 fw-semibold">Nome oggetto</label>
+                                    <input type="text" class="form-control rounded-0 @error('name') is-invalid @enderror"
+                                        id="name" name="name" value="{{ old('name', $item->name) }}" required>
+                                    @error('name')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 col-md-12">
+                                <div class="form-group py-2">
+                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria d'arma (se il tuo
+                                        ogetto lo è)</label>
+                                    <select name="category"
+                                        class="form-control rounded-0 @error('category') is-invalid @enderror" required>
+                                        <option value="category">Not a weapon</option>
+                                        <option value="category">Martial Melee Weapons</option>
+                                        <option value="category">Martial Ranged Weapons</option>
+                                    </select>
+                                </div>
+                                @error('type_id')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-4 col-md-12">
+                                <div class="form-group py-2">
+                                    <label for="dice" class="fs-2 fw-semibold">Chance</label>
+                                    <select name="dice"
+                                        class="form-control rounded-0 @error('dice') is-invalid @enderror" required>
+                                        <option value="dice">1d4</option>
+                                        <option value="dice">1d6</option>
+                                        <option value="dice">1d8</option>
+                                        <option value="dice">1d10</option>
+                                        <option value="dice">1d12</option>
+                                        <option value="dice">2d6</option>
+                                    </select>
+                                </div>
+                                @error('type_id')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-4 col-md-12">
+                                <div class="form-group py-2">
+                                    <label for="type" class="fs-2 fw-semibold">Tipologia</label>
+                                    <select name="type"
+                                        class="form-control rounded-0 @error('type') is-invalid @enderror" required>
+                                        <option value="type">Weapons</option>
+                                        <option value="type">Potions</option>
+                                        <option value="type">Projectile</option>
+                                        <option value="type">Miscellaneous</option>
+                                        <option value="type">Artifacts</option>
+                                    </select>
+                                </div>
+                                @error('type_id')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-6">
+                                <div class="form-group py-2">
+                                    <label for="weight" class="fs-2 fw-semibold">Peso</label>
+                                    <input type="number" min="0" max="50"
+                                        class="form-control rounded-0 @error('weight') is-invalid @enderror" id="weight"
+                                        name="weight" rows="3" value="{{ old('weight', $item->weight) }}" required>
+                                    @error('weight')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="form-group py-2">
+                                    <label for="cost" class="fs-2 fw-semibold">Costo</label>
+                                    <input type="number" min="0" max="75"
+                                        class="form-control rounded-0 @error('cost') is-invalid @enderror" id="cost"
+                                        name="cost" rows="3" value="{{ old('cost', $item->cost) }}" required>
+                                    @error('cost')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        {{-- prova anteprima --}}
+                        <div class="mb-2 img-preview gif-box mx-auto">
+                            <img src="" alt="Character's preview" class="d-none selected-img">
+                        </div>
+                        <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
+                            <a href="{{ route('items.index') }}"
+                                class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-3 py-0">
+                                <i class="bi bi-arrow-left"></i> Ci devo pensare !
+                            </a>
+                            <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Forgia!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

@@ -72,9 +72,9 @@ class ItemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit(Item $item)
+    {   
+        return view('items.edit', compact('item'));
     }
 
     /**
@@ -86,7 +86,13 @@ class ItemsController extends Controller
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
+        $form_data = $request->validated();
 
+        $form_data['slug'] = Item::generateSlug($form_data['name'], '-');
+
+        $item->update($form_data);
+
+        return redirect()->route('items.index');
     }
 
     /**

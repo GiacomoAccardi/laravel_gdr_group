@@ -10,14 +10,14 @@
                     </div>
                     <div class="text-end mt-4 mb-2 ">
                         <a href="{{ route('items.create') }}" class="btn-personal btn-create"><i
-                                    class="bi bi-plus-square-fill me-3"></i>Nuovo oggetto</a>
+                                class="bi bi-plus-square-fill me-3"></i>Nuovo oggetto</a>
                     </div>
-                        <!-- Lista degli oggetti -->
+                    <!-- Lista degli oggetti -->
                     <div class="list-group">
                         <!-- Ciclo sugli oggetti -->
                         @foreach ($items as $item)
                             <div
-                                 class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
                                 <!-- Nome dell'oggetto a sinistra -->
                                 <span>{{ $item->name }}</span>
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
@@ -31,7 +31,7 @@
 
                                     <!-- Form per eliminare l'oggetto -->
                                     <form action="{{ route('items.destroy', ['item' => $item->id]) }}" method="POST"
-                                            class="d-inline">
+                                        class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"class="btn-personal del-btn"
@@ -39,7 +39,7 @@
                                     </form>
                                 </div>
 
-                                    {{-- qui i bottoni mobile --}}
+                                {{-- qui i bottoni mobile --}}
                                 <div class="mt-3 mt-md-0 d-block d-lg-none">
                                     <!-- Link per visualizzare i dettagli dell'oggetto -->
                                     <a href="{{ route('items.show', ['item' => $item->id]) }}"
@@ -55,19 +55,19 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"class="btn-personal del-btn"
-                                                data-pg-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
+                                            data-pg-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
                                     </form>
                                 </div>
                             </div>
-                            @endforeach
-                        </div>
-                        <div class="text-end mt-4 mb-2 ">
-                            <a href="{{ route('items.create') }}" class="btn-personal btn-create"><i
-                                    class="bi bi-plus-square-fill me-3"></i>Nuovo oggetto</a>
-                        </div>
+                        @endforeach
+                    </div>
+                    <div class="text-end mt-4 mb-2 ">
+                        <a href="{{ route('items.create') }}" class="btn-personal btn-create"><i
+                                class="bi bi-plus-square-fill me-3"></i>Nuovo oggetto</a>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- @include('items.partials.destroy_modal') --}}
-    @endsection
+    </div>
+    {{-- @include('items.partials.destroy_modal') --}}
+@endsection
