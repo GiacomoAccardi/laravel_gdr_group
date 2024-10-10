@@ -25,9 +25,11 @@
                         <div class="row">
                             <div class="col-4 col-md-12">
                                 <div class="form-group py-2">
-                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria</label>
+                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria d'arma (se il tuo
+                                        ogetto lo è)</label>
                                     <select name="category"
                                         class="form-control rounded-0 @error('category') is-invalid @enderror" required>
+                                        <option value="category">Not a weapon</option>
                                         <option value="category">Martial Melee Weapons</option>
                                         <option value="category">Martial Ranged Weapons</option>
                                     </select>
