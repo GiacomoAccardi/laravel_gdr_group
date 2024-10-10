@@ -105,7 +105,7 @@
                                 class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold mx-3 py-0">
                                 <i class="bi bi-arrow-left"></i> Ci devo pensare !
                             </a>
-                            <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Genera</button>
+                            <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Forgia!</button>
                         </div>
                     </form>
                 </div>

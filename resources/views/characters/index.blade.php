@@ -8,7 +8,7 @@
                     <div class="d-flex justify-content-center mb-3">
                         <h1>Lista dei personaggi</h1>
                     </div>
-                    <div class="text-end mt-4 mb-2 ">
+                    <div class="text-end mt-4 mb-3">
                         <a href="{{ route('characters.create') }}" class="btn-personal btn-create"><i
                                 class="bi bi-plus-square-fill me-3"></i>Nuovo personaggio</a>
                     </div>
@@ -28,18 +28,18 @@
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli del personaggio -->
                                     <a href="{{ route('characters.show', ['character' => $character->id]) }}"
-                                        class="btn-personal btn-show"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
+                                        class="btn-personal my-2 btn-show"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
 
                                     <!-- Link per modificare il personaggio -->
                                     <a href="{{ route('characters.edit', ['character' => $character->id]) }}"
-                                        class="btn-personal btn-edit"><i class="bi bi-feather me-2"></i>Riscrivi</a>
+                                        class="btn-personal my-2 btn-edit me-3"><i class="bi bi-feather me-2"></i>Riscrivi</a>
 
                                     <!-- Form per eliminare il personaggio -->
                                     <form action="{{ route('characters.destroy', ['character' => $character->id]) }}"
                                         method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn-personal del-btn"
+                                        <button type="submit" class="btn-personal my-2 del-btn"
                                             data-pg-name="{{ $character->name }}">Bandisci</button>
                                     </form>
                                 </div>

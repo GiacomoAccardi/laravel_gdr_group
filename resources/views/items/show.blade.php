@@ -28,8 +28,7 @@
                                 class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger mt-3 delete-button fs-2"
-                                    onclick="return confirm('Sei sicuro di voler cancellare questo oggetto?')">Distruggi</button>
+                                <button type="submit" class="btn btn-danger mt-3 delete-button fs-2">Distruggi</button>
                             </form>
                             </div>
                     </div>
