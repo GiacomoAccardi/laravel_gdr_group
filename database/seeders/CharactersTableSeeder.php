@@ -16,7 +16,7 @@ class CharactersTableSeeder extends Seeder
     public function run()
     {
         $characters = config('characters.characters');
-
+        
         foreach ($characters as $character) {
             $new_character = new Character();
 
@@ -28,6 +28,7 @@ class CharactersTableSeeder extends Seeder
             $new_character->intelligence = $character['intelligence'];
             $new_character->life = $character['life'];
             $new_character->slug = Character::createSlug($new_character->name);
+            $new_character->type_id = $character['type_id'];
 
             $new_character->save();
         }
