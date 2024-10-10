@@ -4,15 +4,19 @@ import "~icons/bootstrap-icons.scss";
 import * as bootstrap from "bootstrap";
 import.meta.glob(["../img/**"]);
 
-//eliminazione
-const delBtns = document.querySelectorAll(".del-btn");
-// altra eliminazione poi vedere ottimizzazione
-const delFromShow = document.querySelectorAll(".characters-del")
+// eliminazione personaggio
+const delChBtns = document.querySelectorAll(".del-btn");
+// eliminazione personaggio in show
+const delChFromShow = document.querySelectorAll(".characters-del")
+// eliminazione oggetto
+const delObBtns = document.querySelectorAll(".obj-delete")
+// eliminazione oggetto in show
+const delObFromShow = document.querySelectorAll(".object-show-delete")
 //cambio preview al cambio della classe nella select
 const selectTypeBtns = document.querySelectorAll('.type_id')
 
 //gestione modale per eliminazione
-delBtns.forEach((btn) => {
+delChBtns.forEach((btn) => {
     btn.addEventListener('click', function (ev) {
         ev.preventDefault();
 
@@ -31,7 +35,7 @@ delBtns.forEach((btn) => {
     });
 });
 
-delFromShow.forEach((btn) => {
+delChFromShow.forEach((btn) => {
     btn.addEventListener('click', function (ev) {
         ev.preventDefault();
 
@@ -42,6 +46,44 @@ delFromShow.forEach((btn) => {
         const pgs_name = btn.getAttribute("data-pg-name");
         let modalAlert = document.getElementById("modal-text");
         modalAlert.innerText = `Sei ben certo di voler bandire ${pgs_name}?`;
+
+        const confirm = document.getElementById("confirm-del");
+        confirm.addEventListener("click", function () {
+            btn.parentElement.submit();
+        });
+    });
+});
+
+delObBtns.forEach((btn) => {
+    btn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+
+        const delModal = document.getElementById("destroyModal");
+        let newModal = new bootstrap.Modal(delModal);
+        newModal.show();
+
+        const obj_name = btn.getAttribute("data-obj-name");
+        let modalAlert = document.getElementById("modal-text");
+        modalAlert.innerText = `Sei ben certo di voler bandire ${obj_name}?`;
+
+        const confirm = document.getElementById("confirm-del");
+        confirm.addEventListener("click", function () {
+            btn.parentElement.submit();
+        });
+    });
+});
+
+delObFromShow.forEach((btn) => {
+    btn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+
+        const delModal = document.getElementById("destroyModal");
+        let newModal = new bootstrap.Modal(delModal);
+        newModal.show();
+
+        const obj_name = btn.getAttribute("data-obj-name");
+        let modalAlert = document.getElementById("modal-text");
+        modalAlert.innerText = `Sei ben certo di voler bandire ${obj_name}?`;
 
         const confirm = document.getElementById("confirm-del");
         confirm.addEventListener("click", function () {

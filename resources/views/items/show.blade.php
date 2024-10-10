@@ -29,7 +29,7 @@
                                 class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger delete-button fs-2">Distruggi</button>
+                                <button type="submit" class="btn btn-danger delete-button fs-2 object-show-delete" data-obj-name="{{ $item->name }}">Distruggi</button>
                             </form>
                             </div>
                     </div>

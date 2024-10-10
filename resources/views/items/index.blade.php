@@ -57,8 +57,8 @@
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit"class="btn-personal my-2 del-btn"
-                                                data-pg-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
+                                        <button type="submit"class="btn-personal my-2 del-btn obj-delete"
+                                                data-obj-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
                                     </form>
                                 </div>
                             </div>
@@ -72,5 +72,5 @@
             </div>
         </div>
     </div>
-    {{-- @include('items.partials.destroy_modal') --}}
+    @include('items.partials.destroy_modal')
 @endsection
