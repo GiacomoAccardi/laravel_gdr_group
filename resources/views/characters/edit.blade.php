@@ -10,7 +10,7 @@
             <div class="d-flex justify-content-center p-4">
                 <form action="{{ route('characters.update', ['character'=> $character->id]) }}" method="post" class="w-75">
                     @csrf
-                    {{-- @method('PUT') --}}
+                    @method('PUT')
                     <div class="row text-white">
                         <div class="col-12 col-md-6">
                             <div class="form-group py-2">
@@ -116,11 +116,10 @@
                         <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
                     <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
-                        <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Riscrivi</button>
-                        <a href="{{ route('characters.index') }}"
-                            class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold ms-3 py-0">
+                        <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-3 py-0">
                             <i class="bi bi-arrow-left"></i> Ci devo pensare !
                         </a>
+                        <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Riscrivi</button>
                     </div>
                 </form>
             </div>
