@@ -1,14 +1,16 @@
-.index-page {
+#overlay_effect {
     font-family: 'Dungeon', sans-serif;
     padding: 30px;
-    color: #8e7444;
+    background-color: rgba(237, 197, 122, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
 
     h1 {
         font-size: 4rem;
         text-align: center;
         color: $seal-brown;
         text-shadow: 1px 1px 2px #999886;
-        border-bottom: 3px solid $seal-brown;
         padding-bottom: 10px;
         margin-bottom: 20px;
     }
@@ -107,11 +109,6 @@
 .bg-items {
     background-image: url('img/items.jpg');
     background-position: 40% 25%;
-}
-
-.bg-panel {
-    background-color: #edc57a9c;
-    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
