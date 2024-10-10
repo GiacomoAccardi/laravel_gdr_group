@@ -8,9 +8,6 @@
                 Genera qui il tuo combattente!
             </h1>
             <div class="d-flex justify-content-center align-items-center p-4">
-                <div class="img-preview gif-box mx-auto">
-                    <img src="" alt="Character's preview" class="d-none selected-img me-4">
-                </div>
                 <form action="{{ route('characters.store') }}" method="post" class="w-75">
                     @csrf
                     <div class="row text-white">
@@ -31,7 +28,6 @@
                                     <option value="">Seleziona la classe</option>
                                     @foreach($types as $type)
                                         <option value="{{ $type->id }}" data-img="{{ asset($type->image) }}">
-                                            
                                             {{ $type->name }}
                                         </option>
                                     @endforeach
@@ -109,10 +105,11 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                         
                         </div>
                     </div>
-                    {{-- prova anteprima --}}
+                    <div class="img-preview gif-box mx-auto">
+                        <img src="" alt="Character's preview" class="d-none selected-img me-4">
+                    </div>
                     <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
                         <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Genera</button>
                         <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold ms-3 py-0">
