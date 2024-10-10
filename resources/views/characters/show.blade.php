@@ -5,9 +5,9 @@
         <div class="container py-5 show-page">
             <div class="row">
                 <div class="col-12 bg-panel text-center p-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <img src="https://via.placeholder.com/150" alt="{{ $character['name'] }}"
-                            class="img-fluid rounded shadow">
+                    <div class="d-flex align-items-center justify-content-center mb-4 show-box mx-auto">
+                        <img src="{{asset($character->type->image)}}" alt="{{ $character['name'] }}"
+                            class="rounded shadow">
                     </div>
                     <h1 class="m-0">{{ $character['name'] }}</h1>
                     <p class="pg_type_text m-0">Classe: {{ $character['type']['name'] ?? 'Non Definita' }}</p>
