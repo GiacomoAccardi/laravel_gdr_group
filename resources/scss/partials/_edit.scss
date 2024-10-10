@@ -73,16 +73,34 @@
         background-color: $seal-brown;
         border: 1px solid $seal-brown;
         color: $coffee;
-        transition: all 0.3s;
+        transition: all 0.5s;
 
         &:hover {
             background-color: #587667;
+            color: #fff;
             border: 1px solid #587667;
+        }
+        &:active {
+            background-color: $seal-brown;
+            border: 1px solid $seal-brown;
+            color: $coffee;
         }
     }
 
     .back_button {
         background-color: $btns_hover;
+        border: 1px solid $btns-hover;
         color: black;
+        transition: all 0.5s;
+        &:hover {
+            border: 1px solid $seal-brown;
+            background-color: $seal-brown;
+            color: $coffee;
+        }
+        &:active {
+            border: 1px solid $btns-hover;
+            background-color: $btns_hover;
+            color: black;
+        }
     }
 }
