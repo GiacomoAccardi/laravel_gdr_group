@@ -101,8 +101,9 @@ class ItemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Item $item)
     {
-        //
+        $item->delete();
+        return redirect()->route('items.index');
     }
 }
