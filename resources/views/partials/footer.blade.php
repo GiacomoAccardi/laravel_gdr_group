@@ -11,8 +11,7 @@
                 <ul class="list-unstyled justify-content-between footer-menu">
                     <li><a href="{{ route('homepage') }}" class=" fs-4 text-decoration-none text-dark  fw-bolder">Home</a></li>
                     <li><a href="{{ route('contacts') }}" class=" fs-4 text-decoration-none text-dark  fw-bolder">Contact</a></li> 
-                    <li><a href="" class="fs-4 text-decoration-none text-dark fw-bolder">Privacy</a></li>
-                    <li><a href="" class="fs-4 text-decoration-none text-dark fw-bolder">Policy</a></li>  
+                    <li><a href="{{ route('about') }}" class="fs-4 text-decoration-none text-dark fw-bolder">About</a></li> 
                 </ul>
             </div>
             <div class="col-4">
@@ -43,7 +42,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center mt-3">
-                <p>&copy; Anno Domini 2024 - La compagnia del Procione - Tutti i diritti riservati.</p>
+                <p class="fs-3">&copy; Anno Domini 2024 - La compagnia del Procione - Tutti i diritti riservati.</p>
             </div>
         </div>
     </div>
