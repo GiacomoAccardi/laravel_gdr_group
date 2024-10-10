@@ -1,38 +1,40 @@
-<footer class="bg-dark text-light py-2">
+<footer class="py-2">
     <div class="container">
         <div class="row d-flex flex-nowrap">
-            <div class="col-4 border">
-                <a href="{{ route('about') }}" class="text-light text-decoration-none">
-                    <h5 class="fs-3">Su di noi</h5>
+            <div class="col-4">
+                <a href="{{ route('about') }}" class=" text-decoration-none text-dark">
+                    <h5 class="fs-2 text-center fw-bolder">Su di noi</h5>
                 </a>
-                <p class="border">"Una compagnia di avventurieri audaci, legati dal destino, si unisce come cavalieri attorno alla Tavola Rotonda. Ogni membro porta con sé la propria storia e abilità, creando un'alleanza indissolubile."</p>
+                <p class="text-center">"Una compagnia di avventurieri audaci, legati dal destino, si unisce come cavalieri attorno alla Tavola Rotonda. Ogni membro porta con sé la propria storia e abilitas, creando un'alleanza indissolubile."</p>
             </div>
-            <div class="col-4 border">
+            <div class="col-4">
                 <ul class="list-unstyled d-flex justify-content-between">
-                    <li><a href="{{ route('homepage') }}" class="text-light fs-4 text-decoration-none">Home</a></li>
-                    <li><a href="{{ route('contacts') }}" class="text-light fs-4 text-decoration-none">Contact</a></li>   
+                    <li><a href="{{ route('homepage') }}" class=" fs-4 text-decoration-none text-dark  fw-bolder">Home</a></li>
+                    <li><a href="{{ route('contacts') }}" class=" fs-4 text-decoration-none text-dark  fw-bolder">Contact</a></li> 
+                    <li><a href="" class="fs-4 text-decoration-none text-dark fw-bolder">Privacy</a></li>
+                    <li><a href="" class="fs-4 text-decoration-none text-dark fw-bolder">Policy</a></li>  
                 </ul>
             </div>
-            <div class="col-4 border">
-                <h5 class="fs-2">Seguiteci</h5>
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="#" class="text-light text-decoration-none fs-5">
+            <div class="col-4">
+                <h5 class="fs-2 fw-bolder text-center">Seguiteci</h5>
+                <ul class="list-unstyled text-center">
+                    <li>
+                        <a href="#" class="text-decoration-none fs-5 text-dark">
                             VoltoLibro <i class="bi bi-facebook"></i>
                         </a>
                     </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-light text-decoration-none fs-5">
+                    <li>
+                        <a href="#" class="text-decoration-none fs-5 text-dark">
                             Croce <i class="bi bi-twitter-x"></i>
                         </a>
                     </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-light text-decoration-none fs-5">
+                    <li>
+                        <a href="#" class="text-decoration-none fs-5 text-dark">
                             Iconografia <i class="bi bi-instagram"></i>
                         </a>
                     </li>
-                    <li class="list-inline-item text-decoration-none  fs-5">
-                        <a href="#" class="text-light text-decoration-none">
+                    <li>
+                        <a href="#" class="text-decoration-none fs-5 text-dark">
                             Il Vostro tubo <i class="bi bi-youtube"></i>
                         </a>
                     </li>
