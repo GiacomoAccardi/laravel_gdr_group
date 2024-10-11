@@ -10,6 +10,16 @@
                     <p class="fs-1 fw-bolder type-description mx-auto">{{ $classinfoItem->description }}</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ route('types.index') }}"
+                                    class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-2">
+                                    <i class="bi bi-arrow-left"></i> Torno sui miei passi . .
+                                </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
