@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Character;
 use App\Models\Type;
+use App\Models\Item;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 
@@ -28,8 +29,9 @@ class CharactersController extends Controller
      */
     public function create()
     {
+        $items = Item::all();
         $types = Type::all();
-        return view('characters.create', compact('types'));
+        return view('characters.create', compact('types', 'items'));
     }
 
     /**
