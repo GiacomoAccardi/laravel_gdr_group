@@ -54,3 +54,21 @@
         }
     }
 }
+
+@media screen and (max-width: 575px) {
+    .modal-content {
+        min-width: 0;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .modal-content {
+        min-width: 0;
+    }
+}
+
+@media screen and (min-width: 766px) {
+    .modal-dialog-centered {
+        justify-content: center;
+    }
+}
