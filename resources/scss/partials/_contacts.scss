@@ -1,6 +1,8 @@
 .bg-contacs {
     background-image: url('img/contactus.jpg');
     background-position: 45% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .bg-panel-contacts {
         background-color: rgba(237, 197, 122, 0.212);
