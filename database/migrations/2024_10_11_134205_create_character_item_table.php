@@ -15,7 +15,13 @@ return new class extends Migration
     {
         Schema::create('character_item', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            // FK character
+            $table->unsignedBigInteger('character_id');
+            $table->foreign('character_id')->references('id')->on('characters');
+
+            //Fk item
+            $table->unsignedBigInteger('item_id');
+            $table->foreign('item_id')->references('id')->on('items');
         });
     }
 
