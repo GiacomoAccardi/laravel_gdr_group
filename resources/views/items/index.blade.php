@@ -38,8 +38,8 @@
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit"class="btn-personal my-2 del-btn"
-                                            data-pg-name="{{ $item->name }}">Distruggi</button>
+                                        <button type="submit"class="btn-personal my-2 del-btn obj-delete"
+                                            data-obj-name="{{ $item->name }}">Distruggi</button>
                                     </form>
                                 </div>
 
