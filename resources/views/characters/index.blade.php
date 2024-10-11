@@ -21,7 +21,7 @@
                                 <!-- Nome del personaggio a sinistra -->
                                 <div class="m-0">
                                     <span>{{ $character->name }}</span>
-                                    <span class="mx-2 text-warning-emphasis">{{ $character->type->name ?? 'Non Definito' }}</span>
+                                    <span class="mx-2"><a href="{{route('types.show', ['type' => $character->type->id])}}" class="text-decoration-none text-warning-emphasis hover-type">{{ $character->type->name ?? 'Non Definito' }}</a></span>
                                     <span class="text-success">HP: {{ $character->life }}</span>
                                 </div>
 
