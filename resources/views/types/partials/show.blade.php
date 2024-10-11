@@ -7,7 +7,7 @@
                 <div class="col-12 bg-panel text-center p-5">
                     <h1 class="m-0">{{ $classinfoItem->name }}</h1>
                     <img src="{{ $classinfoItem->image }}" alt="{{ $classinfoItem->name }}">
-                    <p class=" fs-1 fw-bolder">{{ $classinfoItem->description }}</p>
+                    <p class="fs-1 fw-bolder type-description mx-auto">{{ $classinfoItem->description }}</p>
                 </div>
             </div>
         </div>
