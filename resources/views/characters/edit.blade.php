@@ -29,8 +29,7 @@
                                     class="form-control rounded-0 type_id @error('type_id') is-invalid @enderror">
                                     <option value="">Seleziona la classe</option>
                                     @foreach ($types as $type)
-                                        <option value="{{ old('type_id', $type->id) }}" data-img="{{ asset($type->image) }}">
-                                            {{ $type->name }}
+                                    <option value="{{ $type->id }}" @selected($type->id == old('type_id', $character->type ? $character->type->id : '')) data-img="{{ asset($type->image) }}">                                            {{ $type->name }}
                                         </option>
                                     @endforeach
                                 </select>
