@@ -115,8 +115,11 @@
                         <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
                     <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
-                        <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-3 py-0">
-                            <i class="bi bi-arrow-left"></i> Ci devo pensare !
+                        <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-arrow-left"></i>
+                                <span class="ms-2">Ci devo pensare!</span>
+                            </div>
                         </a>
                         <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Riscrivi</button>
                     </div>

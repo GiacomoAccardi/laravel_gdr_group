@@ -4,7 +4,7 @@
     <div class="bg-items">
         <div class="container">
             <div class="row justify-content-center">
-                <div id="overlay_effect" class="col-12 col-md-8 bg-panel my-5">
+                <div id="overlay_effect" class="col-12 col-md-10 my-5">
                     <div class="d-flex justify-content-center mb-3">
                         <h1>Lista degli oggetti</h1>
                     </div>
@@ -17,12 +17,12 @@
                         <!-- Ciclo sugli oggetti -->
                         @foreach ($items as $item)
                             <div
-                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
-                                <div>
-                                    <!-- Nome dell'oggetto a sinistra -->
-                                    <span>{{ $item->name }}</span>
-                                    <span class="text-warning-emphasis mx-2">Tipo: {{ $item['type'] }}</span>
-                                </div>
+                                 class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center px-lg-5">
+                                 <div>
+                                <!-- Nome dell'oggetto a sinistra -->
+                                <span>{{ $item->name }}</span>
+                                <span class="text-warning-emphasis mx-2">Tipo: {{$item['type']}}</span>
+                                 </div>
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli dell'oggetto -->
                                     <a href="{{ route('items.show', ['item' => $item->id]) }}"

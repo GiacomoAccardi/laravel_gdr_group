@@ -13,14 +13,14 @@
                     <p class="pg_type_text m-0">Classe: {{ $character['type']['name'] ?? 'Non Definita' }}</p>
                     <p class=" fs-1 fw-bolder">{{ $character['description'] }}</p>
 
-                    <div class=" stats">
+                    <div class="stats">
                         <h4>Forza: {{ $character['strength'] }}</h4>
                         <h4>Difesa: {{ $character['defence'] }}</h4>
                         <h4>Velocita': {{ $character['speed'] }}</h4>
                         <h4>Intelligenza: {{ $character['intelligence'] }}</h4>
                         <h4>Salute: {{ $character['life'] }}</h4>
 
-                        <div class="d-flex justify-content-center align-items-center pt-2">
+                        <div class="d-flex justify-content-center align-items-center pt-2 d-none d-md-block">
                             <a href="{{ route('characters.edit', ['character' => $character['id']]) }}"
                                 class="btn btn-warning fs-2 rounded-0"><i class="bi bi-feather"></i>Riscrivi
                             </a>
@@ -36,6 +36,51 @@
                                 <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0 characters-del" data-pg-name="{{ $character->name }}">Bandisci</button>
                             </form>
                         </div>
+
+                        {{-- buttons per mobile --}}
+                        <div class="container d-md-none">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <a href="{{ route('characters.edit', ['character' => $character['id']]) }}"
+                                        class="btn btn-warning fs-2 rounded-0">Riscrivi
+                                    </a>
+                                    <form action="{{ route('characters.destroy', ['character' => $character['id']]) }}" method="POST"
+                                        class="d-inline p-0">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0 characters-del" data-pg-name="{{ $character->name }}">Bandisci</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="{{ route('characters.index') }}" 
+                                    class="text-decoration-none btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-arrow-left"></i>
+                                            <div class="ms-2 fs-3 py-2">Torno sui miei passi . .</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- <div class="d-flex justify-content-center align-items-center pt-2 d-md-none">
+                            <a href="{{ route('characters.edit', ['character' => $character['id']]) }}"
+                                class="btn btn-warning fs-2 rounded-0"><i class="bi bi-feather"></i>Riscrivi
+                            </a>
+                            <a href="{{ route('characters.index') }}"
+                                class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-2">
+                                <i class="bi bi-arrow-left"></i> Torno sui miei passi . .
+                            </a>
+    
+                            <form action="{{ route('characters.destroy', ['character' => $character['id']]) }}" method="POST"
+                                class="d-inline p-0">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0 characters-del" data-pg-name="{{ $character->name }}">Bandisci</button>
+                            </form>
+                        </div> --}}
                     </div>
                 </div>
             </div>
