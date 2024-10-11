@@ -12,7 +12,8 @@
                 <div class="collapse p-0" id="mobileCollapse">
                     <ul class="mt-2">
                         <li><a href="{{ route('characters.index') }}">Personaggi</a></li>
-                        <li><a href="">Oggetti</a></li>
+                        <li><a href="{{ route('items.index') }}">Oggetti</a></li>
+                        <li><a href="{{ route('types.index') }}">Classi</a></li>
                     </ul>
                 </div>
             </li>
