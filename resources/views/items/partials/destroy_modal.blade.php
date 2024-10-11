@@ -1,4 +1,4 @@
-<div class="modal fade" id="destroyModal" tabindex="-1" aria-labelledby="destroyModalLabel" aria-hidden="true">
+<div class="modal fade" id="destroyItemsModal" tabindex="-1" aria-labelledby="destroyItemsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">

@@ -97,7 +97,8 @@ function deletion(btn, entity) {
     btn.addEventListener('click', function (ev) {
         ev.preventDefault();
 
-        const delModal = document.getElementById("destroyModal");
+        const delModalId = entity === 'pg' ? "destroyCharactersModal" : "destroyItemsModal";
+        const delModal = document.getElementById(delModalId)
         let newModal = new bootstrap.Modal(delModal);
         newModal.show();
 
