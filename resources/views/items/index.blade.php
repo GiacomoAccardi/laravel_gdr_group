@@ -17,12 +17,12 @@
                         <!-- Ciclo sugli oggetti -->
                         @foreach ($items as $item)
                             <div
-                                 class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
-                                 <div>
-                                <!-- Nome dell'oggetto a sinistra -->
-                                <span>{{ $item->name }}</span>
-                                <span class="text-warning-emphasis mx-2">Tipo: {{$item['type']}}</span>
-                                 </div>
+                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                <div>
+                                    <!-- Nome dell'oggetto a sinistra -->
+                                    <span>{{ $item->name }}</span>
+                                    <span class="text-warning-emphasis mx-2">Tipo: {{ $item['type'] }}</span>
+                                </div>
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli dell'oggetto -->
                                     <a href="{{ route('items.show', ['item' => $item->id]) }}"
@@ -30,7 +30,8 @@
 
                                     <!-- Link per modificare l'oggetto -->
                                     <a href="{{ route('items.edit', ['item' => $item->id]) }}"
-                                        class="btn-personal my-2 btn-edit me-3"><i class="bi bi-feather me-2"></i>Riscrivi</a>
+                                        class="btn-personal my-2 btn-edit me-3"><i
+                                            class="bi bi-feather me-2"></i>Riscrivi</a>
 
                                     <!-- Form per eliminare l'oggetto -->
                                     <form action="{{ route('items.destroy', ['item' => $item->id]) }}" method="POST"
@@ -38,7 +39,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"class="btn-personal my-2 del-btn"
-                                            data-pg-name="{{ $item->name }}">Bandisci</button>
+                                            data-pg-name="{{ $item->name }}">Distruggi</button>
                                     </form>
                                 </div>
 
@@ -58,7 +59,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"class="btn-personal my-2 del-btn obj-delete"
-                                                data-obj-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
+                                            data-obj-name="{{ $item->name }}"><i class="bi bi-trash2"></i></button>
                                     </form>
                                 </div>
                             </div>
