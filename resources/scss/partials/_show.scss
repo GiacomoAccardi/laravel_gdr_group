@@ -115,3 +115,11 @@
     background-position: 50% 30%;
     background-repeat: repeat;
 }
+
+@media screen and (max-width: 390px) {
+    .show-page {
+        .btn-warning {
+            margin-bottom: 20px;
+        }
+    }
+}

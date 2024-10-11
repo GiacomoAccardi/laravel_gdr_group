@@ -4,7 +4,7 @@
     <div class="bg-charachters">
         <div class="container">
             <div class="row justify-content-center">
-                <div id="overlay_effect" class="col-12 col-md-8 my-5">
+                <div id="overlay_effect" class="col-12 col-md-10 my-5">
                     <div class="d-flex justify-content-center mb-3">
                         <h1>Lista dei personaggi</h1>
                     </div>
@@ -17,9 +17,9 @@
                         <!-- Ciclo sui personaggi -->
                         @foreach ($characters as $character)
                             <div
-                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center px-lg-5">
                                 <!-- Nome del personaggio a sinistra -->
-                                <div>
+                                <div class="m-0">
                                     <span>{{ $character->name }}</span>
                                     <span class="mx-2 text-warning-emphasis">{{ $character->type->name ?? 'Non Definito' }}</span>
                                     <span class="text-success">HP: {{ $character->life }}</span>
