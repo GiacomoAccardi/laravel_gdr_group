@@ -22,6 +22,9 @@ return new class extends Migration
             //Fk item
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items');
+
+            //quantity
+            $table->integer('quantity');
         });
     }
 
