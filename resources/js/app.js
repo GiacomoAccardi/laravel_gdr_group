@@ -150,5 +150,4 @@ selectTypeBtns.forEach((selectType) => {
             preview.classList.add('d-none');
         }
     })
-    
 })
