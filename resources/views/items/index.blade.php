@@ -17,7 +17,7 @@
                         <!-- Ciclo sugli oggetti -->
                         @foreach ($items as $item)
                             <div
-                                 class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center px-lg-5">
+                                 class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center px-lg-4">
                                  <div>
                                 <!-- Nome dell'oggetto a sinistra -->
                                 <span>{{ $item->name }}</span>
@@ -26,7 +26,7 @@
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli dell'oggetto -->
                                     <a href="{{ route('items.show', ['item' => $item->id]) }}"
-                                        class="btn-personal my-2 btn-show"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
+                                        class="btn-personal my-2 btn-show me-2"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
 
                                     <!-- Link per modificare l'oggetto -->
                                     <a href="{{ route('items.edit', ['item' => $item->id]) }}"
