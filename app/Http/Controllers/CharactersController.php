@@ -47,8 +47,15 @@ class CharactersController extends Controller
         // Genera lo slug usando il nome del personaggio
         $data['slug'] = Character::createSlug($data['name']); 
     
+
         // Crea il personaggio con i dati validati
-        Character::create($data);
+        $character = Character::create($data);
+
+        // DA RICONTROLLARE ----------------------
+        if ($request->has('items')) {
+            $items = $request->items;
+            $character->items()->attach($items);
+        }
         
         return redirect()->route('characters.index')->with('success', 'Personaggio creato con successo.');
     }

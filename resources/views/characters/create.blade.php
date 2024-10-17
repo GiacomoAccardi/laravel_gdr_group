@@ -112,23 +112,6 @@
                                         </option>
                                     @endforeach
                                 </select>
-
-                                {{--SENZA CHOISE <select id="item-select" class="form-control choices-select rounded-0 @error('items') is-invalid @enderror">
-                                    <option value="">Seleziona un oggetto...</option>
-                                    @foreach($items as $item)
-                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                    @endforeach
-                                </select>
-                                
-                                <!-- Pulsante per aggiungere l'oggetto selezionato -->
-                                <button type="button" id="add-item-btn" class="btn btn-primary">+</button>
-                                
-                                <!-- Area dove appariranno gli oggetti selezionati -->
-                                <div id="selected-items" class="mt-3"></div>
-                                
-                                <!-- Input nascosti per l'invio degli oggetti selezionati al server -->
-                                <input type="hidden" name="items[]" id="items-input">
-                                <input type="hidden" name="item_quantities[]" id="quantities-input"> --}}
                                 
                             </div>
                             @error('items')
