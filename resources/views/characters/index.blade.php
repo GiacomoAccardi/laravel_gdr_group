@@ -17,7 +17,7 @@
                         <!-- Ciclo sui personaggi -->
                         @foreach ($characters as $character)
                             <div
-                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center px-lg-5">
+                                class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center px-lg-4">
                                 <!-- Nome del personaggio a sinistra -->
                                 <div class="m-0">
                                     <span>{{ $character->name }}</span>
@@ -28,7 +28,7 @@
                                 <div class="mt-3 mt-md-0 d-none d-lg-block">
                                     <!-- Link per visualizzare i dettagli del personaggio -->
                                     <a href="{{ route('characters.show', ['character' => $character->id]) }}"
-                                        class="btn-personal my-2 btn-show"><i class="bi bi-eye-fill me-2"></i>Dettagli</a>
+                                        class="btn-personal my-2 btn-show me-2"><i class="bi bi-eye-fill me-2 "></i>Dettagli</a>
 
                                     <!-- Link per modificare il personaggio -->
                                     <a href="{{ route('characters.edit', ['character' => $character->id]) }}"
