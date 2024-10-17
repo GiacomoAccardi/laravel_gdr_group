@@ -123,7 +123,7 @@
 
 .choices {
     .choices__inner {
-        font-size: 12px;
+        font-size: 18px;
         letter-spacing: 2px;
         font-weight: bolder;
         color: #fff;
@@ -135,7 +135,7 @@
 
         input[type=search] {
             padding: 5px;
-            min-width: 100px !important;
+            min-width: 150px !important;
             width: 100px;
         }
 
@@ -157,6 +157,7 @@
         justify-content: center;
 
         .choices__item.choices__item--choice {
+            font-size: 20px;
             cursor: pointer;
             margin: 5px 10px;
             padding: 3px 10px;

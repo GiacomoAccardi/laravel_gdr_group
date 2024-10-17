@@ -104,6 +104,7 @@
                                     <input type="checkbox" id="item-{{ $item->id }}" name="items[]" value="{{ $item->id }}" class="form-check-input me-3 my-2" {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'checked' : ''}}>
                                     <label for="item-{{ $item->id }}" class="me-2 fw-semibold">{{ $item->name }}</label>
                                 </div> --}}
+                                {{-- CHOISE.JS LIBRARY --}}
                                 <select name="items[]" id="items" class="form-control choices-select rounded-0 @error('items') is-invalid @enderror" multiple>
                                     @foreach($items as $item)
                                         <option value="{{ $item->id }}" {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'selected' : '' }}>
@@ -111,6 +112,23 @@
                                         </option>
                                     @endforeach
                                 </select>
+
+                                {{--SENZA CHOISE <select id="item-select" class="form-control choices-select rounded-0 @error('items') is-invalid @enderror">
+                                    <option value="">Seleziona un oggetto...</option>
+                                    @foreach($items as $item)
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                    @endforeach
+                                </select>
+                                
+                                <!-- Pulsante per aggiungere l'oggetto selezionato -->
+                                <button type="button" id="add-item-btn" class="btn btn-primary">+</button>
+                                
+                                <!-- Area dove appariranno gli oggetti selezionati -->
+                                <div id="selected-items" class="mt-3"></div>
+                                
+                                <!-- Input nascosti per l'invio degli oggetti selezionati al server -->
+                                <input type="hidden" name="items[]" id="items-input">
+                                <input type="hidden" name="item_quantities[]" id="quantities-input"> --}}
                                 
                             </div>
                             @error('items')

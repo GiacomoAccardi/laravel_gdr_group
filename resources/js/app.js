@@ -1,5 +1,5 @@
 import "./bootstrap";
-//TEST
+// Ho aggiunto una libreria tramite npm
 import Choices from "choices.js";
 //
 import "~resources/scss/app.scss";
@@ -69,13 +69,15 @@ selectTypeBtns.forEach((selectType) => {
     })
 })
 
-// TEST
-// Inizializzazione di Choices.js su tutti gli elementi select con multiple
+// CHOISE.JS
 const selectElement = document.querySelector('.choices-select');
 if (selectElement) {
+    // inizializzazione istanza choices
     const choices = new Choices(selectElement, {
-        removeItemButton: true,  // Aggiunge il pulsante per rimuovere le selezioni
-        searchEnabled: true,     // Abilita la ricerca tra le opzioni
-        placeholderValue: 'Filtra gli oggetti',  // Placeholder personalizzato
+        // btn per rimozione
+        removeItemButton: true,
+        //possibilità ricerca
+        searchEnabled: true,
+        placeholderValue: 'Filtra gli oggetti',
     });
 }
