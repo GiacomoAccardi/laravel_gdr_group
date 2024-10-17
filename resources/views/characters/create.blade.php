@@ -98,6 +98,28 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group py-2">
+                                <label for="items" class="fs-2 fw-semibold d-block">Seleziona uno o piu' oggetti</label>
+                                
+                                {{-- <div class="form-check-inline box-checkbox">
+                                    <input type="checkbox" id="item-{{ $item->id }}" name="items[]" value="{{ $item->id }}" class="form-check-input me-3 my-2" {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'checked' : ''}}>
+                                    <label for="item-{{ $item->id }}" class="me-2 fw-semibold">{{ $item->name }}</label>
+                                </div> --}}
+                                {{-- CHOISE.JS LIBRARY --}}
+                                <select name="items[]" id="items" class="form-control choices-select rounded-0 @error('items') is-invalid @enderror" multiple>
+                                    @foreach($items as $item)
+                                        <option value="{{ $item->id }}" {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'selected' : '' }}>
+                                            {{ $item->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                
+                            </div>
+                            @error('items')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group py-2">
                                 <label for="description" class="fs-2 fw-semibold">Descrizione</label>
                                 <textarea class="form-control rounded-0 @error('description') is-invalid @enderror" id="description" name="description"
                                     rows="3">{{ old('description') }}</textarea>

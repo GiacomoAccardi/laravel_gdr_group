@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id();
             // FK character
             $table->unsignedBigInteger('character_id');
-            $table->foreign('character_id')->references('id')->on('characters');
+            $table->foreign('character_id')->references('id')->on('characters')->cascadeOnDelete();
 
             //Fk item
             $table->unsignedBigInteger('item_id');
-            $table->foreign('item_id')->references('id')->on('items');
+            $table->foreign('item_id')->references('id')->on('items')->cascadeOnDelete();
 
             //quantity
-            $table->integer('quantity');
+            $table->integer('quantity')->default(1);
         });
     }
 
