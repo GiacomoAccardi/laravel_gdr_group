@@ -17,21 +17,53 @@
                         <h4>Weight: {{ $item['weight'] }} lb</h4>
                         <h4>Cost: {{ $item['cost'] }} gold</h4>
                         <h4>Dice: {{ $item['dice'] }}</h2>
-                            <div class="d-flex justify-content-center align-items-center pt-2">
-                            <a href="{{ route('items.edit', ['item' => $item['id']]) }}"
-                                class="btn btn-warning fs-2"><i class="bi bi-feather"></i>Riscrivi</a>
-                                <a href="{{ route('items.index') }}"
-                                class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-2">
-                                <i class="bi bi-arrow-left"></i> Torno sui miei passi . .
-                            </a>
-
-                            <form action="{{ route('items.destroy', ['item' => $item['id']]) }}" method="POST"
-                                class="d-inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger delete-button fs-2 object-show-delete" data-obj-name="{{ $item->name }}">Distruggi</button>
-                            </form>
+                        <div class="d-flex justify-content-center align-items-center pt-2 d-none d-md-block">
+                            <div>
+                                <a href="{{ route('items.edit', ['item' => $item['id']]) }}"
+                                    class="btn btn-warning fs-2 rounded-0"><i class="bi bi-feather"></i>Riscrivi
+                                </a>
+                                <form action="{{ route('items.destroy', ['item' => $item['id']]) }}" method="POST"
+                                    class="d-inline p-0">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0 items-del" data-pg-name="{{ $item->name }}">Bandisci</button>
+                                </form>
                             </div>
+                            <div class="my-4">
+                                <a href="{{ route('items.index') }}"
+                                    class="text-decoration-none rounded-0 fw-semibold py-2 my-3 fs-1 return-anchor">
+                                    <i class="bi bi-arrow-left"></i> Torno sui miei passi . .
+                                </a>
+                            </div>
+                        </div>
+
+                        {{-- buttons per mobile --}}
+                        <div class="container d-md-none">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <a href="{{ route('items.edit', ['item' => $item['id']]) }}"
+                                        class="btn btn-warning fs-2 rounded-0">Riscrivi
+                                    </a>
+                                    <form action="{{ route('items.destroy', ['item' => $item['id']]) }}" method="POST"
+                                        class="d-inline p-0">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger delete-button fs-2 rounded-0 items-del" data-pg-name="{{ $item->name }}">Bandisci</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="{{ route('items.index') }}" 
+                                    class="text-decoration-none rounded-0 fw-semibold py-2 my-3 fs-1 return-anchor">
+                                        <div class="d-flex align-items-center justify-content-center return-mobile">
+                                            <i class="bi bi-arrow-left"></i>
+                                            <div class="ms-2 fs-1 py-2">Torno sui miei passi . .</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
