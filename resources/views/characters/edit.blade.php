@@ -114,15 +114,35 @@
                     <div class="my-4 img-preview gif-box mx-auto">
                         <img src="" alt="Character's preview" class="d-none selected-img">
                     </div>
-                    <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
-                        <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-arrow-left"></i>
-                                <span class="ms-2">Ci devo pensare!</span>
+
+                    <div class="py-3 mt-3 d-none d-md-block">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-arrow-left"></i>
+                                        <span class="ms-2">Ci devo pensare!</span>
+                                    </div>
+                                </a>
+                                <button id="forge_button_mobile" type="submit" class="fs-1 p-0 px-4 py-2 rounded-0 letter_spacing">Riscrivi</button>
                             </div>
-                        </a>
-                        <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Riscrivi</button>
-                    </div>
+                        </div>
+
+                        {{-- button Mobile --}}
+                        <div class="py-3 mt-3 d-flex flex-column d-md-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <button id="forge_button_mobile" type="submit" class="mb-3 p-2 rounded-0 letter_spacing">Riscrivi</button>
+                                </div>
+                                <div class="col-12">
+                                    <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-0">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-arrow-left"></i>
+                                            <span class="ms-2">Ci devo pensare!</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                 </form>
             </div>
         </div>

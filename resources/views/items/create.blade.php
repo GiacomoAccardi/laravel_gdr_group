@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6 col-md-6">
+                            <div class="col-6">
                                 <div class="form-group py-2">
                                     <label for="weight" class="fs-2 fw-semibold">Peso</label>
                                     <input type="number" min="0" max="50"
@@ -83,7 +83,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6">
+                            <div class="col-6">
                                 <div class="form-group py-2">
                                     <label for="cost" class="fs-2 fw-semibold">Costo</label>
                                     <input type="number" min="0" max="75"

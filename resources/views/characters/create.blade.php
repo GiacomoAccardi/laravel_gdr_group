@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <section id="create_page">
         <div id="overlay_effect" class="container text-center">
             <h1 class="p-0 m-0">
@@ -24,9 +23,10 @@
                         <div class="col-12 col-md-6">
                             <div class="form-group py-2">
                                 <label for="type_id" class="fs-2 fw-semibold">Classe</label>
-                                <select name="type_id" class="form-control rounded-0 type_id @error('type_id') is-invalid @enderror">
+                                <select name="type_id"
+                                    class="form-control rounded-0 type_id @error('type_id') is-invalid @enderror">
                                     <option value="">Seleziona la classe</option>
-                                    @foreach($types as $type)
+                                    @foreach ($types as $type)
                                         <option value="{{ $type->id }}" data-img="{{ asset($type->image) }}">
                                             {{ $type->name }}
                                         </option>
@@ -99,20 +99,23 @@
                         <div class="col-12">
                             <div class="form-group py-2">
                                 <label for="items" class="fs-2 fw-semibold d-block">Seleziona uno o piu' oggetti</label>
-                                
+
                                 {{-- <div class="form-check-inline box-checkbox">
                                     <input type="checkbox" id="item-{{ $item->id }}" name="items[]" value="{{ $item->id }}" class="form-check-input me-3 my-2" {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'checked' : ''}}>
                                     <label for="item-{{ $item->id }}" class="me-2 fw-semibold">{{ $item->name }}</label>
                                 </div> --}}
                                 {{-- CHOISE.JS LIBRARY --}}
-                                <select name="items[]" id="items" class="form-control choices-select rounded-0 @error('items') is-invalid @enderror" multiple>
-                                    @foreach($items as $item)
-                                        <option value="{{ $item->id }}" {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'selected' : '' }}>
+                                <select name="items[]" id="items"
+                                    class="form-control choices-select rounded-0 @error('items') is-invalid @enderror"
+                                    multiple>
+                                    @foreach ($items as $item)
+                                        <option value="{{ $item->id }}"
+                                            {{ is_array(old('items')) && in_array($item->id, old('items')) ? 'selected' : '' }}>
                                             {{ $item->name }}
                                         </option>
                                     @endforeach
                                 </select>
-                                
+
                             </div>
                             @error('items')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -121,8 +124,8 @@
                         <div class="col-12">
                             <div class="form-group py-2">
                                 <label for="description" class="fs-2 fw-semibold">Descrizione</label>
-                                <textarea class="form-control rounded-0 @error('description') is-invalid @enderror" id="description" name="description"
-                                    rows="3">{{ old('description') }}</textarea>
+                                <textarea class="form-control rounded-0 @error('description') is-invalid @enderror" id="description"
+                                    name="description" rows="3">{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -132,14 +135,36 @@
                     <div class=" my-4 img-preview gif-box mx-auto">
                         <img src="" alt="Character's preview" class="d-none selected-img me-4">
                     </div>
-                    <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
-                        <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-arrow-left"></i>
-                                <span class="ms-2">Ci devo pensare!</span>
+
+                    <div class="py-3 mt-3 d-none d-md-block">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-arrow-left"></i>
+                                    <span class="ms-2">Ci devo pensare!</span>
+                                </div>
+                            </a>
+                            <button id="forge_button_mobile" type="submit" class="fs-1 p-0 px-4 py-2 rounded-0 letter_spacing">Genera</button>
+                        </div>
+                    </div>
+
+                    {{-- button Mobile --}}
+                    <div class="py-3 mt-3 d-flex flex-column d-md-none">
+                        <div class="row">
+                            <div class="col-12">
+                                <button id="forge_button_mobile" type="submit"
+                                    class="mb-3 p-2 rounded-0 letter_spacing">Genera</button>
                             </div>
-                        </a>
-                        <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Genera</button>
+                            <div class="col-12">
+                                <a href="{{ route('characters.index') }}"
+                                    class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-0">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-arrow-left"></i>
+                                        <span class="ms-2">Ci devo pensare!</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
