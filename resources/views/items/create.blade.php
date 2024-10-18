@@ -101,7 +101,7 @@
 
                         <div class="py-3 mt-3 d-none d-md-block">
                             <div class="d-flex justify-content-center align-items-center">
-                                <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
+                                <a href="{{ route('items.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
                                     <div class="d-flex align-items-center">
                                         <i class="bi bi-arrow-left"></i>
                                         <span class="ms-2">Ci devo pensare!</span>
@@ -118,7 +118,7 @@
                                     <button id="forge_button_mobile" type="submit" class="mb-3 p-2 rounded-0 letter_spacing">Forgia!</button>
                                 </div>
                                 <div class="col-12">
-                                    <a href="{{ route('characters.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-0">
+                                    <a href="{{ route('items.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-0">
                                         <div class="d-flex align-items-center">
                                             <i class="bi bi-arrow-left"></i>
                                             <span class="ms-2">Ci devo pensare!</span>
