@@ -11,7 +11,7 @@
                     <form action="{{ route('items.store') }}" method="post" class="w-75">
                         @csrf
                         <div class="row text-white justify-content-center">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="form-group py-2">
                                     <label for="name" class="fs-2 fw-semibold">Nome oggetto</label>
                                     <input type="text" class="form-control rounded-0 @error('name') is-invalid @enderror"
@@ -21,11 +21,9 @@
                                     @enderror
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4 col-md-12">
+                            <div class="col-12 col-lg-6">
                                 <div class="form-group py-2">
-                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria d'arma del tuo oggetto</label>
+                                    <label for="category" class="fs-2 fw-semibold">Seleziona la categoria</label>
                                     <select name="category"
                                         class="form-control rounded-0 @error('category') is-invalid @enderror" required>
                                         <option value="Not a weapon" {{old('category') == 'Not a weapon' ? 'selected' : ''}}>Not a weapon</option>
@@ -37,7 +35,9 @@
                                     <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-4 col-md-12">
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group py-2">
                                     <label for="dice" class="fs-2 fw-semibold">Chance</label>
                                     <select name="dice"
@@ -54,7 +54,7 @@
                                     <div class="alert alert-danger fs-4">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-4 col-md-12">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group py-2">
                                     <label for="type" class="fs-2 fw-semibold">Tipologia</label>
                                     <select name="type"
@@ -95,16 +95,37 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- prova anteprima --}}
                         <div class="mb-2 img-preview gif-box mx-auto">
                             <img src="" alt="Character's preview" class="d-none selected-img">
                         </div>
-                        <div class="py-3 mt-3 d-flex justify-content-center align-items-center">
-                            <a href="{{ route('characters.index') }}"
-                                class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold mx-3 py-0">
-                                <i class="bi bi-arrow-left"></i> Ci devo pensare !
-                            </a>
-                            <button type="submit" class="fs-3 p-0 px-2 rounded-0 letter_spacing">Forgia!</button>
+
+                        <div class="py-3 mt-3 d-none d-md-block">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{ route('items.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold me-2 py-0">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-arrow-left"></i>
+                                        <span class="ms-2">Ci devo pensare!</span>
+                                    </div>
+                                </a>
+                                <button id="forge_button_mobile" type="submit" class="fs-1 p-0 px-4 py-2 rounded-0 letter_spacing">Forgia!</button>
+                            </div>
+                        </div>
+
+                        {{-- button Mobile --}}
+                        <div class="py-3 mt-3 d-flex flex-column d-md-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <button id="forge_button_mobile" type="submit" class="mb-3 p-2 rounded-0 letter_spacing">Forgia!</button>
+                                </div>
+                                <div class="col-12">
+                                    <a href="{{ route('items.index') }}" class="text-decoration-none fs-3 btn btn-sm rounded-0 back_button fw-semibold py-0">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-arrow-left"></i>
+                                            <span class="ms-2">Ci devo pensare!</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
