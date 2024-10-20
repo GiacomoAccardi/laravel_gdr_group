@@ -119,6 +119,7 @@ class CharactersController extends Controller
      */
     public function destroy(Character $character)
     {
+        $character->items()->synch([]);
         $character->delete();
         return redirect()->route('characters.index');
     }
