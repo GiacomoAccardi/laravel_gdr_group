@@ -9,7 +9,7 @@ use App\Models\Character;
 class CharactersController extends Controller
 {
     public function index() {
-        $characters = Character::with('type')->get();
+        $characters = Character::with('type')->paginate(6);
         return response()->json([
             'success' => true,
             'results' => $characters
