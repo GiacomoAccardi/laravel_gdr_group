@@ -105,7 +105,7 @@ class CharactersController extends Controller
         if($request->has('items')) {
             $character->items()->sync($request->items);
         } else {
-            $character->items()->synch([]);
+            $character->items()->sync([]);
         }
 
         return redirect()->route('characters.index')->with('success', 'Personaggio modificato con successo.');
@@ -119,7 +119,7 @@ class CharactersController extends Controller
      */
     public function destroy(Character $character)
     {
-        $character->items()->synch([]);
+        $character->items()->sync([]);
         $character->delete();
         return redirect()->route('characters.index');
     }
