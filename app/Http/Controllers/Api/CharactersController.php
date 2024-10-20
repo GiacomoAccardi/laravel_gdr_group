@@ -15,4 +15,18 @@ class CharactersController extends Controller
             'results' => $characters
         ]);
     }
+
+    public function confirmChoice($slug) {
+        $character = Character::where('slug', $slug)->first();
+        if (!$character) {
+            return response()->json([
+                'success' => false
+            ]);
+        }
+        
+        return response()->json([
+            'success' => true,
+            'character' => $character
+        ]);
+    }
 }
