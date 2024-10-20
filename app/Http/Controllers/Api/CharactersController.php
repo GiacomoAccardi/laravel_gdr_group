@@ -16,15 +16,14 @@ class CharactersController extends Controller
         ]);
     }
 
-    public function confirmChoise($slug) {
+    public function confirmChoice($slug) {
         $character = Character::where('slug', $slug)->first();
-
-        if(!$character) {
+        if (!$character) {
             return response()->json([
                 'success' => false
             ]);
         }
-
+        
         return response()->json([
             'success' => true,
             'character' => $character
