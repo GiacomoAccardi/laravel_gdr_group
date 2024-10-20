@@ -82,7 +82,8 @@ class CharactersController extends Controller
     {   
         $character = Character::with('type')->findOrFail($id);
         $types = Type::all();
-        return view('characters.edit', compact('character', 'types'));
+        $items = Item::all();
+        return view('characters.edit', compact('character', 'types', 'items'));
     }
 
     /**
@@ -94,7 +95,19 @@ class CharactersController extends Controller
      */
     public function update(UpdateCharacterRequest $request, Character $character)
     {
-        $character->update($request->validated());
+        $data = $request->validated();
+
+        // Genera lo slug usando il nome del personaggio
+        $data['slug'] = Character::createSlug($data['name']); 
+        
+        $character->update($data);
+
+        if($request->has('items')) {
+            $character->items()->sync($request->items);
+        } else {
+            $character->items()->synch([]);
+        }
+
         return redirect()->route('characters.index')->with('success', 'Personaggio modificato con successo.');
     }
 
