@@ -9,7 +9,7 @@ use App\Models\Character;
 class CharactersController extends Controller
 {
     public function index() {
-        $characters = Character::all();
+        $characters = Character::with('type')->get();
         return response()->json([
             'success' => true,
             'results' => $characters
