@@ -19,13 +19,14 @@
                         <h4>Velocita': {{ $character['speed'] }}</h4>
                         <h4>Intelligenza: {{ $character['intelligence'] }}</h4>
                         <h4>Salute: {{ $character['life'] }}</h4>
-                        <h4 class="d-flex flex-wrap justify-content-center"><strong>Oggetti</strong>: 
+                        <h4 class="d-flex flex-wrap justify-content-center items"><strong>Oggetti</strong>: 
                             @forelse($character->items as $item)
-                            <p class="mx-1">{{$item->name}} -</p>
+                            <p class="mx-2">{{$item->name}}.</p>
                             @empty
                                <p> L'eroe non porta con se' alcun oggetto </p>
                             @endempty
                         </h4>
+                            
                     </div>
                         <div class="d-flex justify-content-center align-items-center pt-2 d-none d-md-block">
                             <div>
