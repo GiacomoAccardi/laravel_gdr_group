@@ -102,6 +102,27 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group py-2">
+                                <label for="items" class="fs-2 fw-semibold d-block">Seleziona uno o piu' oggetti</label>
+                    
+                                <select name="items[]" id="items"
+                                    class="form-control choices-select rounded-0 @error('items') is-invalid @enderror"
+                                    multiple>
+                                    @foreach ($items as $item)
+                                        <option value="{{ $item->id }}"
+                                            @if (is_array(old('items', $character->items->pluck('id')->toArray())) && in_array($item->id, old('items', $character->items->pluck('id')->toArray())))
+                                                selected
+                                            @endif>
+                                            {{ $item->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @error('items')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group py-2">
                                 <label for="description" class="fs-2 fw-semibold">Descrizione</label>
                                 <textarea class="form-control rounded-0 @error('description') is-invalid @enderror" id="description"
                                     name="description" rows="3">{{ old('description', $character->description) }}</textarea>
