@@ -23,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/characters', [CharactersController::class, 'index'])->name('characters');
 Route::get('/items', [ItemsController::class, 'index'])->name('items');
 Route::get('/characters/confirm-choices/{slug}', [CharactersController::class, 'confirmChoice'])->name('confirm');
+Route::get('/raccoon-the-game', [CharactersController::class, 'gameScreen'])->name('game');
