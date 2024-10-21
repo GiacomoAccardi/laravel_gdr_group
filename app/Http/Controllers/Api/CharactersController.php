@@ -29,4 +29,12 @@ class CharactersController extends Controller
             'character' => $character
         ]);
     }
+
+    public function gameScreen(){
+        $characters = Character::whit('type', 'items')->get();
+        return response()->json([
+            'success' => true,
+            'results' => $characters
+        ]);
+    }
 }
