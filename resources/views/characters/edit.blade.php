@@ -43,7 +43,7 @@
                         <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="strength" class="fs-2 fw-semibold">Forza</label>
-                                <input type="number" min="0" max="15"
+                                <input type="number" min="1" max="15"
                                     class="form-control rounded-0 @error('strength') is-invalid @enderror" id="strength"
                                     name="strength" rows="3" value="{{ old('strength', $character->strength) }}"
                                 >
@@ -55,7 +55,7 @@
                         <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="defence" class="fs-2 fw-semibold">Difesa</label>
-                                <input type="number" min="0" max="15"
+                                <input type="number" min="1" max="15"
                                     class="form-control rounded-0 @error('defence') is-invalid @enderror" id="defence"
                                     name="defence" rows="3" value="{{ old('defence', $character->defence) }}"
                                 >
@@ -67,7 +67,7 @@
                         <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="speed" class="fs-2 fw-semibold">Velocita'</label>
-                                <input type="number" min="0" max="15"
+                                <input type="number" min="1" max="15"
                                     class="form-control rounded-0 @error('speed') is-invalid @enderror" id="speed"
                                     name="speed" rows="3" value="{{ old('speed', $character->speed) }}">
                                 @error('speed')
@@ -78,7 +78,7 @@
                         <div class="col-12 col-md-4 offset-md-2">
                             <div class="form-group py-2">
                                 <label for="intelligence" class="fs-2 fw-semibold">Intelligenza</label>
-                                <input type="number" min="0" max="15"
+                                <input type="number" min="1" max="15"
                                     class="form-control rounded-0 @error('intelligence') is-invalid @enderror"
                                     id="intelligence" name="intelligence" rows="3"
                                     value="{{ old('intelligence', $character->intelligence) }}">
@@ -90,7 +90,7 @@
                         <div class="col-12 col-md-4">
                             <div class="form-group py-2">
                                 <label for="life" class="fs-2 fw-semibold">Salute</label>
-                                <input type="number" min="0" max="200"
+                                <input type="number" min="1" max="200"
                                     class="form-control rounded-0 @error('life') is-invalid @enderror" id="life"
                                     name="life" rows="3" value="{{ old('life', $character->life) }}">
                                 @error('life')
