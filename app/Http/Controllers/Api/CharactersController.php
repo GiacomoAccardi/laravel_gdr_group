@@ -9,7 +9,7 @@ use App\Models\Character;
 class CharactersController extends Controller
 {
     public function index() {
-        $characters = Character::with('type')->paginate(3);
+        $characters = Character::with('type', 'items')->paginate(3);
         return response()->json([
             'success' => true,
             'results' => $characters
@@ -17,7 +17,7 @@ class CharactersController extends Controller
     }
 
     public function confirmChoice($slug) {
-        $character = Character::where('slug', $slug)->first();
+        $character = Character::with('type', 'items')->where('slug', $slug)->first();
         if (!$character) {
             return response()->json([
                 'success' => false
